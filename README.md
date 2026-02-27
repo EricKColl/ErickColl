@@ -1,13 +1,13 @@
 # Purpose, discipline, and code
 
-## 👨‍💻Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Focused on Continuous Growth
+## Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Focused on Continuous Growth
 
 I am an ambitious and disciplined professional currently studying Web Application Development (DAW), with a strong interest in software development and modern web technologies.  
 Coming from the field of administration, I have developed a solid foundation in organization, responsibility, problem-solving, and attention to detail — skills that I now apply to my transition into the tech world.
 
 I am currently building my knowledge in programming, backend and frontend development, and operating systems through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building practical, scalable, and well-structured solutions.
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 ### Currently learning / using
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -32,12 +32,12 @@ I am currently building my knowledge in programming, backend and frontend develo
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-## 📌 Featured Projects
+##  Featured Projects
 - JobConnect – Frontend project built with HTML, CSS, Bootstrap and JavaScript
 - Online Store – Collaborative Java project developed as part of a team
 - More projects coming soon...
 
-### 📊 GitHub Activity & Stats
+###  GitHub Activity & Stats
 
 ![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=radical)
 
