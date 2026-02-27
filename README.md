@@ -1,4 +1,4 @@
-# Hi there, I'm Erick Coll 👋
+# Purpose, discipline, and code
 
 ## 👨‍💻Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Focused on Continuous Growth
 
