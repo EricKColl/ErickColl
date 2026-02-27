@@ -37,3 +37,11 @@ DAW Student | Future Full-Stack Developer | Learning by building real projects s
 - JobConnect – Frontend project built with HTML, CSS, Bootstrap and JavaScript
 - Online Store – Collaborative Java project developed as part of a team
 - More projects coming soon...
+
+### 📊 GitHub Activity & Stats
+
+![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=radical)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=ErickColl&theme=radical)
+
+![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ErickColl&layout=compact&theme=radical)
