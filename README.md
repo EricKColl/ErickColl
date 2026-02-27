@@ -35,4 +35,5 @@ DAW Student | Future Full-Stack Developer | Learning by building real projects s
 
 ## 📌 Featured Projects
 - JobConnect – Frontend project built with HTML, CSS, Bootstrap and JavaScript
+- Online Store – Collaborative Java project developed as part of a team
 - More projects coming soon...
