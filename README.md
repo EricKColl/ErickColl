@@ -36,9 +36,3 @@ DAW Student | Future Full-Stack Developer | Learning by building real projects s
 ## 📌 Featured Projects
 - JobConnect – Frontend project built with HTML, CSS, Bootstrap and JavaScript
 - More projects coming soon...
-
-## 📊 GitHub Stats
-
-![Erick's GitHub stats](https://github-readme-stats.vercel.app/api?username=ErickColl&show_icons=true)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ErickColl&layout=compact)
