@@ -1,12 +1,11 @@
 # Hi there, I'm Erick Coll 👋
 
-## 👨‍💻 About Me
-DAW Student | Future Full-Stack Developer | Learning by building real projects step by step
+## 👨‍💻Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Focused on Continuous Growth
 
-- 🎓 Student of Web Application Development (DAW)
-- 💻 Interested in backend, frontend and software development
-- 🚀 Building projects to improve my programming skills
-- 📚 Currently developing my knowledge in web technologies, programming and operating systems
+I am an ambitious and disciplined professional currently studying Web Application Development (DAW), with a strong interest in software development and modern web technologies.  
+Coming from the field of administration, I have developed a solid foundation in organization, responsibility, problem-solving, and attention to detail — skills that I now apply to my transition into the tech world.
+
+I am currently building my knowledge in programming, backend and frontend development, and operating systems through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building practical, scalable, and well-structured solutions.
 
 ## 🚀 Tech Stack
 
