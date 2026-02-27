@@ -1,12 +1,15 @@
 # Welcome — I’m Erick Coll Rodríguez
-# Purpose, discipline, and code
+### Purpose, discipline, and code
 
-## Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Focused on Continuous Growth
+## Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Applied AI Learner
 
-I am an ambitious and disciplined professional currently studying Web Application Development (DAW), with a strong interest in software development and modern web technologies.  
-Coming from the field of administration, I have developed a solid foundation in organization, responsibility, problem-solving, and attention to detail — skills that I now apply to my transition into the tech world.
+I am an ambitious and disciplined professional currently studying Web Application Development (DAW), with a strong interest in software development, modern web technologies, and applied artificial intelligence.
 
-I am currently building my knowledge in programming, backend and frontend development, and operating systems through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building practical, scalable, and well-structured solutions.
+Coming from the field of administration, I have developed a solid foundation in organization, responsibility, problem-solving, attention to detail, and structured work — skills that I now apply to my transition into the tech world.
+
+I am currently building my knowledge in programming, backend and frontend development, operating systems, and real-world digital tools through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building practical, scalable, and well-structured solutions.
+
+At the same time, I am also exploring the practical use of AI in professional and creative environments, with a growing interest in corporate AI, workflow optimization, and AI-powered tools for content creation and digital productivity.
 
 ##  Tech Stack
 
@@ -23,6 +26,18 @@ I am currently building my knowledge in programming, backend and frontend develo
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### AI interests & applied tools
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-74AA9C?style=for-the-badge&logo=openai&logoColor=white)
+![Microsoft Copilot](https://img.shields.io/badge/Microsoft%20Copilot-000000?style=for-the-badge&logo=microsoft&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+
+- Applied AI for **corporate workflows and productivity**
+- AI tools for **photo editing, video editing, file and document processing**
+- AI-assisted **music, content creation, and digital media workflows**
+- Ongoing exploration of **automation, prompt design, and practical AI integration**
 
 ### Tools & environments
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
