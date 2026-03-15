@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="./Banner Erick Coll Rodríguez.png" alt="Erick Coll Rodríguez Banner" width="70%">
-</div>
+<img src="./Banner Erick Coll Rodríguez.png" alt="Erick Coll Rodríguez Banner" width="100%">
 
 # Welcome to my development space
 
