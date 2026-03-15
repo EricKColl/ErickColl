@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./Banner Erick Coll Rodríguez.png" alt="Erick Coll Rodríguez Banner" width="100%">
 
-# Welcome — I’m Erick Coll Rodríguez
+# Welcome to my development space
 
 ### Purpose, discipline, and code
 
