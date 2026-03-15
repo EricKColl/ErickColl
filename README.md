@@ -1,62 +1,192 @@
+<div align="center">
+  <img src="./Banner Erick Coll Rodríguez.png" alt="Erick Coll Rodríguez Banner" width="100%">
+
 # Welcome — I’m Erick Coll Rodríguez
+
 ### Purpose, discipline, and code
 
-## Ambitious DAW Student | Aspiring Full-Stack Developer | Administrative Background | Applied AI Learner
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=900&lines=Ambitious+DAW+Student;Aspiring+Full-Stack+Developer;Administrative+Background;Applied+AI+Learner;Building+discipline+through+technology" alt="Typing SVG" />
 
-I am an ambitious and disciplined professional currently studying Web Application Development (DAW), with a strong interest in software development, modern web technologies, and applied artificial intelligence.
+<p>
+  <img src="https://img.shields.io/badge/Focus-Software%20Development-0f172a?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/Path-Full--Stack%20Development-1d4ed8?style=for-the-badge&logo=codefactor&logoColor=white">
+  <img src="https://img.shields.io/badge/Interest-Applied%20AI-0891b2?style=for-the-badge&logo=openai&logoColor=white">
+  <img src="https://img.shields.io/badge/Mindset-Discipline%20%26%20Growth-0ea5e9?style=for-the-badge&logo=target&logoColor=white">
+</p>
 
-Coming from the field of administration, I have developed a solid foundation in organization, responsibility, problem-solving, attention to detail, and structured work — skills that I now apply to my transition into the tech world.
+<p>
+  <a href="https://github.com/ErickColl">
+    <img src="https://img.shields.io/badge/GitHub-Profile-111827?style=for-the-badge&logo=github&logoColor=white">
+  </a>
+  <a href="mailto:erickcollrodriguez@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-111827?style=for-the-badge&logo=gmail&logoColor=EA4335">
+  </a>
+</p>
 
-I am currently building my knowledge in programming, backend and frontend development, operating systems, and real-world digital tools through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building practical, scalable, and well-structured solutions.
+</div>
 
-At the same time, I am also exploring the practical use of AI in professional and creative environments, with a growing interest in corporate AI, workflow optimization, and AI-powered tools for content creation and digital productivity.
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
 
-##  Tech Stack
+## About Me
+
+I am an ambitious and disciplined professional currently studying **Web Application Development (DAW)**, with a strong interest in **software development**, **modern web technologies**, and **applied artificial intelligence**.
+
+Coming from the field of administration, I have developed a solid foundation in **organization**, **responsibility**, **problem-solving**, **attention to detail**, and **structured work** — skills that I now apply to my transition into the tech world.
+
+I am currently building my knowledge in **programming**, **backend and frontend development**, **operating systems**, and **real-world digital tools** through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building **practical, scalable, and well-structured solutions**.
+
+At the same time, I am also exploring the practical use of AI in professional and creative environments, with a growing interest in **corporate AI**, **workflow optimization**, and **AI-powered tools for content creation and digital productivity**.
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Core Profile
+
+<table>
+  <tr>
+    <td><strong>🎓 Current path</strong></td>
+    <td>Web Application Development (DAW)</td>
+  </tr>
+  <tr>
+    <td><strong>💻 Main direction</strong></td>
+    <td>Full-Stack Development</td>
+  </tr>
+  <tr>
+    <td><strong>🧠 Extra focus</strong></td>
+    <td>Applied AI, productivity workflows, prompt design</td>
+  </tr>
+  <tr>
+    <td><strong>🏗 Background</strong></td>
+    <td>Administration and structured professional work</td>
+  </tr>
+  <tr>
+    <td><strong>🚀 Goal</strong></td>
+    <td>Build useful, scalable and well-designed digital solutions</td>
+  </tr>
+</table>
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Tech Stack
 
 ### Currently learning / using
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+<p>
+  <img src="https://img.shields.io/badge/Java-111827?style=for-the-badge&logo=openjdk&logoColor=ED8B00">
+  <img src="https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+  <img src="https://img.shields.io/badge/HTML5-111827?style=for-the-badge&logo=html5&logoColor=E34F26">
+  <img src="https://img.shields.io/badge/CSS3-111827?style=for-the-badge&logo=css3&logoColor=1572B6">
+  <img src="https://img.shields.io/badge/C-111827?style=for-the-badge&logo=c&logoColor=00599C">
+  <img src="https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=3776AB">
+</p>
 
 ### Familiar with
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+<p>
+  <img src="https://img.shields.io/badge/C++-0f172a?style=for-the-badge&logo=cplusplus&logoColor=60A5FA">
+  <img src="https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=nodedotjs&logoColor=22C55E">
+  <img src="https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB">
+  <img src="https://img.shields.io/badge/MongoDB-0f172a?style=for-the-badge&logo=mongodb&logoColor=22C55E">
+</p>
 
 ### AI interests & applied tools
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![ChatGPT](https://img.shields.io/badge/ChatGPT-74AA9C?style=for-the-badge&logo=openai&logoColor=white)
-![Microsoft Copilot](https://img.shields.io/badge/Microsoft%20Copilot-000000?style=for-the-badge&logo=microsoft&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+<p>
+  <img src="https://img.shields.io/badge/OpenAI-111827?style=for-the-badge&logo=openai&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/ChatGPT-111827?style=for-the-badge&logo=openai&logoColor=74AA9C">
+  <img src="https://img.shields.io/badge/Microsoft%20Copilot-111827?style=for-the-badge&logo=microsoft&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/Google%20Gemini-111827?style=for-the-badge&logo=google&logoColor=4285F4">
+  <img src="https://img.shields.io/badge/Claude-111827?style=for-the-badge&logo=anthropic&logoColor=D97757">
+</p>
+
+### Tools & environments
+<p>
+  <img src="https://img.shields.io/badge/Git-0f172a?style=for-the-badge&logo=git&logoColor=F05032">
+  <img src="https://img.shields.io/badge/GitHub-0f172a?style=for-the-badge&logo=github&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/VS%20Code-0f172a?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC">
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-0f172a?style=for-the-badge&logo=intellijidea&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/VirtualBox-0f172a?style=for-the-badge&logo=virtualbox&logoColor=183A61">
+  <img src="https://img.shields.io/badge/Windows-0f172a?style=for-the-badge&logo=windows&logoColor=3B82F6">
+  <img src="https://img.shields.io/badge/Linux-0f172a?style=for-the-badge&logo=linux&logoColor=FCC624">
+</p>
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## AI & Digital Workflow Interests
 
 - Applied AI for **corporate workflows and productivity**
 - AI tools for **photo editing, video editing, file and document processing**
 - AI-assisted **music, content creation, and digital media workflows**
 - Ongoing exploration of **automation, prompt design, and practical AI integration**
 
-### Tools & environments
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white)
-![Visual Studio Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
-![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
 
-##  Featured Projects
-- JobConnect – Frontend project built with HTML, CSS, Bootstrap and JavaScript
-- Online Store – Collaborative Java project developed as part of a team
+## Current Goals
+
+- Strengthen my **Java** and **backend development** foundations
+- Build more complete and polished **full-stack projects**
+- Improve my **GitHub portfolio**, code structure and project presentation
+- Continue exploring **applied AI** in practical and productive workflows
+- Grow as a disciplined developer with strong technical foundations
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Soft Skills
+
+- Structured and disciplined work ethic
+- Strong sense of responsibility
+- Problem-solving mindset
+- Attention to detail
+- Organization and consistency
+- Adaptability and continuous learning
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Featured Projects
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters Producto 2</a></h3>
+      <p>Collaborative <strong>Java project</strong> focused on MVC architecture, generics, exceptions, JUnit testing, and console-based business logic.</p>
+    </td>
+    <td width="50%">
+      <h3>💼 <a href="https://github.com/EricKColl/full-stack-attack-jobboard">Full Stack Attack JobBoard</a></h3>
+      <p><strong>Frontend project</strong> built around job platform concepts, using web technologies and structured interface development.</p>
+    </td>
+  </tr>
+</table>
+
 - More projects coming soon...
 
-###  GitHub Activity & Stats
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
 
-![GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=radical)
+## GitHub Activity & Stats
 
-![GitHub Streak](https://streak-stats.demolab.com?user=ErickColl&theme=radical)
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170">
+  <img src="https://streak-stats.demolab.com?user=ErickColl&theme=tokyonight&hide_border=true" height="170">
+</p>
 
-![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ErickColl&layout=compact&theme=radical)
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ErickColl&layout=compact&theme=tokyonight&hide_border=true" height="170">
+</p>
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Contact
+
+- **Email:** erickcollrodriguez@gmail.com
+- **GitHub:** [github.com/ErickColl](https://github.com/ErickColl)
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+## Philosophy
+
+> **Discipline builds consistency.**  
+> **Consistency builds skill.**  
+> **Skill builds value.**
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+
+<div align="center">
+
+### Building my path through discipline, technology, and continuous growth.
+
+</div>
