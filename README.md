@@ -23,8 +23,6 @@
   </a>
 </p>
 
-</div>
-
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
 
 ## About Me
@@ -33,9 +31,11 @@ I am an ambitious and disciplined professional currently studying **Web Applicat
 
 Coming from the field of administration, I have developed a solid foundation in **organization**, **responsibility**, **problem-solving**, **attention to detail**, and **structured work** — skills that I now apply to my transition into the tech world.
 
-I am currently building my knowledge in **programming**, **backend and frontend development**, **operating systems**, and **real-world digital tools** through hands-on projects and continuous learning. My goal is to grow into a versatile developer capable of building **practical, scalable, and well-structured solutions**.
+I am currently building my knowledge in **programming**, **backend and frontend development**, **operating systems**, **virtualization**, **containerization**, and **real-world digital tools** through hands-on projects and continuous learning. I also work with technologies such as **C++**, **PHP**, **WordPress**, **Laravel**, **Docker**, **VirtualBox**, and **Hyper-V**.
 
-At the same time, I am also exploring the practical use of AI in professional and creative environments, with a growing interest in **corporate AI**, **workflow optimization**, and **AI-powered tools for content creation and digital productivity**.
+My goal is to grow into a versatile developer capable of building **practical, scalable, and well-structured solutions**.
+
+At the same time, I actively explore the practical use of AI in both **technical** and **creative** environments. I work with tools such as **Claude**, **ChatGPT**, **Codex**, **DeepSeek**, **Microsoft Copilot**, **Google Gemini**, **Suno AI**, and different **AI agents** to support coding workflows, research, prompt design, automation, content generation, digital productivity, and creative experimentation.
 
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
 
@@ -52,7 +52,7 @@ At the same time, I am also exploring the practical use of AI in professional an
   </tr>
   <tr>
     <td><strong>🧠 Extra focus</strong></td>
-    <td>Applied AI, productivity workflows, prompt design</td>
+    <td>Applied AI, AI agents, productivity workflows, prompt design</td>
   </tr>
   <tr>
     <td><strong>🏗 Background</strong></td>
@@ -75,24 +75,32 @@ At the same time, I am also exploring the practical use of AI in professional an
   <img src="https://img.shields.io/badge/HTML5-111827?style=for-the-badge&logo=html5&logoColor=E34F26">
   <img src="https://img.shields.io/badge/CSS3-111827?style=for-the-badge&logo=css3&logoColor=1572B6">
   <img src="https://img.shields.io/badge/C-111827?style=for-the-badge&logo=c&logoColor=00599C">
+  <img src="https://img.shields.io/badge/C++-111827?style=for-the-badge&logo=cplusplus&logoColor=00599C">
   <img src="https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=3776AB">
+  <img src="https://img.shields.io/badge/PHP-111827?style=for-the-badge&logo=php&logoColor=777BB4">
+  <img src="https://img.shields.io/badge/WordPress-111827?style=for-the-badge&logo=wordpress&logoColor=21759B">
+  <img src="https://img.shields.io/badge/Laravel-111827?style=for-the-badge&logo=laravel&logoColor=FF2D20">
 </p>
 
 ### Familiar with
 <p>
-  <img src="https://img.shields.io/badge/C++-0f172a?style=for-the-badge&logo=cplusplus&logoColor=60A5FA">
   <img src="https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=nodedotjs&logoColor=22C55E">
   <img src="https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB">
   <img src="https://img.shields.io/badge/MongoDB-0f172a?style=for-the-badge&logo=mongodb&logoColor=22C55E">
+  <img src="https://img.shields.io/badge/Docker-0f172a?style=for-the-badge&logo=docker&logoColor=2496ED">
 </p>
 
 ### AI interests & applied tools
 <p>
   <img src="https://img.shields.io/badge/OpenAI-111827?style=for-the-badge&logo=openai&logoColor=ffffff">
   <img src="https://img.shields.io/badge/ChatGPT-111827?style=for-the-badge&logo=openai&logoColor=74AA9C">
+  <img src="https://img.shields.io/badge/Claude-111827?style=for-the-badge&logoColor=D97757">
+  <img src="https://img.shields.io/badge/Codex-111827?style=for-the-badge&logo=openai&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/DeepSeek-111827?style=for-the-badge&logoColor=ffffff">
   <img src="https://img.shields.io/badge/Microsoft%20Copilot-111827?style=for-the-badge&logo=microsoft&logoColor=ffffff">
   <img src="https://img.shields.io/badge/Google%20Gemini-111827?style=for-the-badge&logo=google&logoColor=4285F4">
-  <img src="https://img.shields.io/badge/Claude-111827?style=for-the-badge&logo=anthropic&logoColor=D97757">
+  <img src="https://img.shields.io/badge/Suno%20AI-111827?style=for-the-badge&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/AI%20Agents-111827?style=for-the-badge&logo=robotframework&logoColor=22C55E">
 </p>
 
 ### Tools & environments
@@ -100,8 +108,11 @@ At the same time, I am also exploring the practical use of AI in professional an
   <img src="https://img.shields.io/badge/Git-0f172a?style=for-the-badge&logo=git&logoColor=F05032">
   <img src="https://img.shields.io/badge/GitHub-0f172a?style=for-the-badge&logo=github&logoColor=ffffff">
   <img src="https://img.shields.io/badge/VS%20Code-0f172a?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC">
+  <img src="https://img.shields.io/badge/Visual%20Studio%202022-0f172a?style=for-the-badge&logo=visualstudio&logoColor=5C2D91">
   <img src="https://img.shields.io/badge/IntelliJ%20IDEA-0f172a?style=for-the-badge&logo=intellijidea&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/Docker-0f172a?style=for-the-badge&logo=docker&logoColor=2496ED">
   <img src="https://img.shields.io/badge/VirtualBox-0f172a?style=for-the-badge&logo=virtualbox&logoColor=183A61">
+  <img src="https://img.shields.io/badge/Hyper--V-0f172a?style=for-the-badge&logo=microsoft&logoColor=00A4EF">
   <img src="https://img.shields.io/badge/Windows-0f172a?style=for-the-badge&logo=windows&logoColor=3B82F6">
   <img src="https://img.shields.io/badge/Linux-0f172a?style=for-the-badge&logo=linux&logoColor=FCC624">
 </p>
@@ -110,9 +121,11 @@ At the same time, I am also exploring the practical use of AI in professional an
 
 ## AI & Digital Workflow Interests
 
-- Applied AI for **corporate workflows and productivity**
+- Applied AI for **coding support, structured workflows, and productivity**
+- Use of **Claude, ChatGPT, Codex, DeepSeek, Gemini, and Copilot** in learning and development processes
+- Practical experimentation with **AI agents** for automation, task support, reasoning workflows, and process optimization
 - AI tools for **photo editing, video editing, file and document processing**
-- AI-assisted **music, content creation, and digital media workflows**
+- AI-assisted **music, content creation, and digital media workflows**, including tools such as **Suno AI**
 - Ongoing exploration of **automation, prompt design, and practical AI integration**
 
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
