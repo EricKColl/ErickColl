@@ -1,10 +1,10 @@
 <div align="center">
-  
-# Welcome — I’m Erick Coll Rodríguez
 
-### Purpose, discipline, and code
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1d4ed8,100:38bdf8&height=210&section=header&text=Erick%20Coll%20Rodr%C3%ADguez&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Purpose%20%C2%B7%20Discipline%20%C2%B7%20Code&descSize=20&descAlignY=75" width="100%" alt="Header"/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=900&lines=Ambitious+DAW+Student;Aspiring+Full-Stack+Developer;Administrative+Background;Applied+AI+Learner;Building+discipline+through+technology" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=900&lines=Ambitious+DAW+Student;Aspiring+Full-Stack+Developer;Administrative+Background;Applied+AI+Learner;Building+discipline+through+technology" alt="Typing SVG" />
+
+<br/>
 
 <p>
   <img src="https://img.shields.io/badge/Focus-Software%20Development-0f172a?style=for-the-badge&logo=github&logoColor=white">
@@ -20,11 +20,22 @@
   <a href="mailto:erickcollrodriguez@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-111827?style=for-the-badge&logo=gmail&logoColor=EA4335">
   </a>
+  <img src="https://komarev.com/ghpvc/?username=ErickColl&style=for-the-badge&color=1d4ed8&label=PROFILE+VIEWS">
 </p>
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+</div>
 
-## About Me
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🧭 About Me
+
+```yaml
+name:        Erick Coll Rodríguez
+role:        Web Application Development (DAW) Student
+transition:  Administration ➜ Software Development
+direction:   Full-Stack Development · Applied AI
+mindset:     "Discipline builds consistency. Consistency builds skill. Skill builds value."
+```
 
 I am an ambitious and disciplined professional currently studying **Web Application Development (DAW)**, with a strong interest in **software development**, **modern web technologies**, and **applied artificial intelligence**.
 
@@ -36,11 +47,29 @@ My goal is to grow into a versatile developer capable of building **practical, s
 
 At the same time, I actively explore the practical use of AI in both **technical** and **creative** environments. I work with tools such as **Claude**, **ChatGPT**, **Codex**, **DeepSeek**, **Microsoft Copilot**, **Google Gemini**, **Suno AI**, and different **AI agents** to support coding workflows, research, prompt design, automation, content generation, digital productivity, and creative experimentation.
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## Core Profile
+## 🗺️ My Journey
 
-<table>
+```mermaid
+graph LR
+    A["🏛 Administration<br/>Structure · Responsibility · Detail"] ==> B["🎓 DAW Studies<br/>Web Application Development"]
+    B ==> C["💻 Full-Stack Developer<br/>Backend · Frontend · DevOps"]
+    B ==> D["🧠 Applied AI<br/>Agents · Automation · Prompt Design"]
+    C ==> E["🚀 Goal<br/>Practical, scalable & well-structured solutions"]
+    D ==> E
+    style A fill:#0f172a,stroke:#38bdf8,color:#ffffff
+    style B fill:#1d4ed8,stroke:#38bdf8,color:#ffffff
+    style C fill:#0891b2,stroke:#38bdf8,color:#ffffff
+    style D fill:#0891b2,stroke:#38bdf8,color:#ffffff
+    style E fill:#0ea5e9,stroke:#ffffff,color:#ffffff
+```
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🎯 Core Profile
+
+<table align="center" width="100%">
   <tr>
     <td><strong>🎓 Current path</strong></td>
     <td>Web Application Development (DAW)</td>
@@ -63,12 +92,17 @@ At the same time, I actively explore the practical use of AI in both **technical
   </tr>
 </table>
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## Tech Stack
+## 🛠 Tech Stack
 
-### Currently learning / using
-<p>
+<details open>
+<summary><strong>⚡ Currently learning / using</strong></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,js,html,css,c,cpp,python,php,wordpress,laravel&perline=10" alt="Currently learning" />
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/Java-111827?style=for-the-badge&logo=openjdk&logoColor=ED8B00">
   <img src="https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
   <img src="https://img.shields.io/badge/HTML5-111827?style=for-the-badge&logo=html5&logoColor=E34F26">
@@ -80,30 +114,45 @@ At the same time, I actively explore the practical use of AI in both **technical
   <img src="https://img.shields.io/badge/WordPress-111827?style=for-the-badge&logo=wordpress&logoColor=21759B">
   <img src="https://img.shields.io/badge/Laravel-111827?style=for-the-badge&logo=laravel&logoColor=FF2D20">
 </p>
+</details>
 
-### Familiar with
-<p>
+<details open>
+<summary><strong>🌱 Familiar with</strong></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,react,mongodb,docker&perline=10" alt="Familiar with" />
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=nodedotjs&logoColor=22C55E">
   <img src="https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB">
   <img src="https://img.shields.io/badge/MongoDB-0f172a?style=for-the-badge&logo=mongodb&logoColor=22C55E">
   <img src="https://img.shields.io/badge/Docker-0f172a?style=for-the-badge&logo=docker&logoColor=2496ED">
 </p>
+</details>
 
-### AI interests & applied tools
-<p>
+<details open>
+<summary><strong>🤖 AI interests & applied tools</strong></summary>
+<br/>
+<p align="center">
   <img src="https://img.shields.io/badge/OpenAI-111827?style=for-the-badge&logo=openai&logoColor=ffffff">
   <img src="https://img.shields.io/badge/ChatGPT-111827?style=for-the-badge&logo=openai&logoColor=74AA9C">
-  <img src="https://img.shields.io/badge/Claude-111827?style=for-the-badge&logoColor=D97757">
+  <img src="https://img.shields.io/badge/Claude-111827?style=for-the-badge&logo=anthropic&logoColor=D97757">
   <img src="https://img.shields.io/badge/Codex-111827?style=for-the-badge&logo=openai&logoColor=ffffff">
   <img src="https://img.shields.io/badge/DeepSeek-111827?style=for-the-badge&logoColor=ffffff">
   <img src="https://img.shields.io/badge/Microsoft%20Copilot-111827?style=for-the-badge&logo=microsoft&logoColor=ffffff">
-  <img src="https://img.shields.io/badge/Google%20Gemini-111827?style=for-the-badge&logo=google&logoColor=4285F4">
+  <img src="https://img.shields.io/badge/Google%20Gemini-111827?style=for-the-badge&logo=googlegemini&logoColor=4285F4">
   <img src="https://img.shields.io/badge/Suno%20AI-111827?style=for-the-badge&logoColor=ffffff">
   <img src="https://img.shields.io/badge/AI%20Agents-111827?style=for-the-badge&logo=robotframework&logoColor=22C55E">
 </p>
+</details>
 
-### Tools & environments
-<p>
+<details open>
+<summary><strong>🧰 Tools & environments</strong></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,visualstudio,idea,docker,windows,linux&perline=10" alt="Tools" />
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/Git-0f172a?style=for-the-badge&logo=git&logoColor=F05032">
   <img src="https://img.shields.io/badge/GitHub-0f172a?style=for-the-badge&logo=github&logoColor=ffffff">
   <img src="https://img.shields.io/badge/VS%20Code-0f172a?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC">
@@ -115,61 +164,84 @@ At the same time, I actively explore the practical use of AI in both **technical
   <img src="https://img.shields.io/badge/Windows-0f172a?style=for-the-badge&logo=windows&logoColor=3B82F6">
   <img src="https://img.shields.io/badge/Linux-0f172a?style=for-the-badge&logo=linux&logoColor=FCC624">
 </p>
+</details>
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## AI & Digital Workflow Interests
+## 🤖 AI & Digital Workflow Interests
 
-- Applied AI for **coding support, structured workflows, and productivity**
-- Use of **Claude, ChatGPT, Codex, DeepSeek, Gemini, and Copilot** in learning and development processes
-- Practical experimentation with **AI agents** for automation, task support, reasoning workflows, and process optimization
-- AI tools for **photo editing, video editing, file and document processing**
-- AI-assisted **music, content creation, and digital media workflows**, including tools such as **Suno AI**
-- Ongoing exploration of **automation, prompt design, and practical AI integration**
+| Area | Focus |
+|:--|:--|
+| ⚙️ **Applied AI** | Coding support, structured workflows, and productivity |
+| 💬 **AI Assistants** | Claude, ChatGPT, Codex, DeepSeek, Gemini, and Copilot in learning and development processes |
+| 🕹 **AI Agents** | Practical experimentation for automation, task support, reasoning workflows, and process optimization |
+| 🖼 **Media Tools** | AI tools for photo editing, video editing, file and document processing |
+| 🎵 **Creative Workflows** | AI-assisted music, content creation, and digital media workflows, including tools such as Suno AI |
+| 🔁 **Continuous Exploration** | Automation, prompt design, and practical AI integration |
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## Current Goals
+## 🎯 Current Goals
 
-- Strengthen my **Java** and **backend development** foundations
-- Build more complete and polished **full-stack projects**
-- Improve my **GitHub portfolio**, code structure and project presentation
-- Continue exploring **applied AI** in practical and productive workflows
-- Grow as a disciplined developer with strong technical foundations
+- [ ] Strengthen my **Java** and **backend development** foundations
+- [ ] Build more complete and polished **full-stack projects**
+- [ ] Improve my **GitHub portfolio**, code structure and project presentation
+- [ ] Continue exploring **applied AI** in practical and productive workflows
+- [ ] Grow as a disciplined developer with strong technical foundations
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+## 🧩 Soft Skills
 
-## Soft Skills
+<p align="center">
+  <img src="https://img.shields.io/badge/Structured%20%26%20Disciplined%20Work%20Ethic-0f172a?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Strong%20Sense%20of%20Responsibility-1d4ed8?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Problem--Solving%20Mindset-0891b2?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Attention%20to%20Detail-0ea5e9?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Organization%20%26%20Consistency-0f172a?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Adaptability%20%26%20Continuous%20Learning-1d4ed8?style=for-the-badge">
+</p>
 
-- Structured and disciplined work ethic
-- Strong sense of responsibility
-- Problem-solving mindset
-- Attention to detail
-- Organization and consistency
-- Adaptability and continuous learning
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
-
-## Featured Projects
+## 🚀 Featured Projects
 
 <table>
   <tr>
-    <td width="50%">
-      <h3>🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters Producto 2</a></h3>
+    <td width="50%" valign="top">
+      <h3 align="center">🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters Producto 2</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/BugBusters-Producto2">
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=BugBusters-Producto2&theme=tokyonight&hide_border=true" alt="BugBusters Producto 2"/>
+        </a>
+      </p>
       <p>Collaborative <strong>Java project</strong> focused on MVC architecture, generics, exceptions, JUnit testing, and console-based business logic.</p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Java-111827?style=flat-square&logo=openjdk&logoColor=ED8B00">
+        <img src="https://img.shields.io/badge/MVC-111827?style=flat-square">
+        <img src="https://img.shields.io/badge/JUnit-111827?style=flat-square&logo=junit5&logoColor=25A162">
+      </p>
     </td>
-    <td width="50%">
-      <h3>💼 <a href="https://github.com/EricKColl/full-stack-attack-jobboard">Full Stack Attack JobBoard</a></h3>
+    <td width="50%" valign="top">
+      <h3 align="center">💼 <a href="https://github.com/EricKColl/full-stack-attack-jobboard">Full Stack Attack JobBoard</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/full-stack-attack-jobboard">
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=full-stack-attack-jobboard&theme=tokyonight&hide_border=true" alt="Full Stack Attack JobBoard"/>
+        </a>
+      </p>
       <p><strong>Frontend project</strong> built around job platform concepts, using web technologies and structured interface development.</p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/HTML5-111827?style=flat-square&logo=html5&logoColor=E34F26">
+        <img src="https://img.shields.io/badge/CSS3-111827?style=flat-square&logo=css3&logoColor=1572B6">
+        <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E">
+      </p>
     </td>
   </tr>
 </table>
 
-- More projects coming soon...
+<p align="center"><em>More projects coming soon...</em></p>
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## GitHub Activity & Stats
+## 📊 GitHub Activity & Stats
 
 <p align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170">
@@ -180,25 +252,39 @@ At the same time, I actively explore the practical use of AI in both **technical
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ErickColl&layout=compact&theme=tokyonight&hide_border=true" height="170">
 </p>
 
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ErickColl&theme=tokyo-night&hide_border=true&area=true" width="95%">
+</p>
 
-## Contact
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-- **Email:** erickcollrodriguez@gmail.com
-- **GitHub:** [github.com/ErickColl](https://github.com/ErickColl)
-
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
-
-## Philosophy
-
-> **Discipline builds consistency.**  
-> **Consistency builds skill.**  
-> **Skill builds value.**
-
-<hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, #38bdf8, transparent);">
+## 📬 Contact
 
 <div align="center">
 
-### Building my path through discipline, technology, and continuous growth.
+| | |
+|:--:|:--|
+| 📧 **Email** | [erickcollrodriguez@gmail.com](mailto:erickcollrodriguez@gmail.com) |
+| 🐙 **GitHub** | [github.com/ErickColl](https://github.com/ErickColl) |
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🧠 Philosophy
+
+<div align="center">
+
+> ### **Discipline builds consistency.**
+> ### **Consistency builds skill.**
+> ### **Skill builds value.**
+
+<br/>
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+
+### ✨ Building my path through discipline, technology, and continuous growth. ✨
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:38bdf8,50:1d4ed8,100:0f172a&height=140&section=footer" width="100%" alt="Footer"/>
 
 </div>
