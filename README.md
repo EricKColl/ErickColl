@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1d4ed8,100:38bdf8&height=210&section=header&text=Erick%20Coll%20Rodr%C3%ADguez&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Purpose%20%C2%B7%20Discipline%20%C2%B7%20Code&descSize=20&descAlignY=75" width="100%" alt="Header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1d4ed8,100:38bdf8&height=260&section=header&text=Erick%20Coll%20Rodr%C3%ADguez&fontSize=50&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Purpose%20%C2%B7%20Discipline%20%C2%B7%20Code&descSize=20&descAlignY=56" width="100%" alt="Header"/>
 
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=900&lines=Ambitious+DAW+Student;Aspiring+Full-Stack+Developer;Administrative+Background;Applied+AI+Learner;Building+discipline+through+technology" alt="Typing SVG" />
 
