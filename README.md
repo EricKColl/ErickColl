@@ -29,7 +29,6 @@
 <img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🧭 About Me
-
 I am an ambitious and disciplined professional currently studying **Web Application Development (DAW)**, with a strong interest in **software development**, **modern web technologies**, and **applied artificial intelligence**.
 
 Coming from the field of administration, I have developed a solid foundation in **organization**, **responsibility**, **problem-solving**, **attention to detail**, and **structured work** — skills that I now apply to my transition into the tech world.
