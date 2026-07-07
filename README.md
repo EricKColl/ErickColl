@@ -14,13 +14,14 @@
 </p>
 
 <p>
-  <a href="https://github.com/ErickColl">
+  <a href="https://github.com/EricKColl">
     <img src="https://img.shields.io/badge/GitHub-Profile-111827?style=for-the-badge&logo=github&logoColor=white">
   </a>
   <a href="mailto:erickcollrodriguez@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-111827?style=for-the-badge&logo=gmail&logoColor=EA4335">
   </a>
-  <img src="https://komarev.com/ghpvc/?username=ErickColl&style=for-the-badge&color=1d4ed8&label=PROFILE+VIEWS">
+  <img src="https://img.shields.io/badge/%F0%9F%93%8D-Girona%2C%20Spain-111827?style=for-the-badge">
+  <img src="https://komarev.com/ghpvc/?username=EricKColl&style=for-the-badge&color=1d4ed8&label=PROFILE+VIEWS">
 </p>
 
 </div>
@@ -120,12 +121,13 @@ graph LR
 <summary><strong>🌱 Familiar with</strong></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,react,mongodb,docker&perline=10" alt="Familiar with" />
+  <img src="https://skillicons.dev/icons?i=nodejs,react,mongodb,graphql,docker&perline=10" alt="Familiar with" />
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=nodedotjs&logoColor=22C55E">
   <img src="https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB">
   <img src="https://img.shields.io/badge/MongoDB-0f172a?style=for-the-badge&logo=mongodb&logoColor=22C55E">
+  <img src="https://img.shields.io/badge/GraphQL-0f172a?style=for-the-badge&logo=graphql&logoColor=E10098">
   <img src="https://img.shields.io/badge/Docker-0f172a?style=for-the-badge&logo=docker&logoColor=2496ED">
 </p>
 </details>
@@ -207,7 +209,53 @@ graph LR
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters Producto 2</a></h3>
+      <h3 align="center">💼 <a href="https://github.com/EricKColl/FullStackAttack-Producto4">FullStackAttack · Producto 4</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/FullStackAttack-Producto4">
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=FullStackAttack-Producto4&theme=tokyonight&hide_border=true" alt="FullStackAttack Producto 4"/>
+        </a>
+      </p>
+      <p><strong>Full-Stack JavaScript application</strong> integrating frontend, GraphQL, MongoDB, Mongoose, Fetch and WebSockets — the most complete iteration of the JobConnect platform.</p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E">
+        <img src="https://img.shields.io/badge/GraphQL-111827?style=flat-square&logo=graphql&logoColor=E10098">
+        <img src="https://img.shields.io/badge/MongoDB-111827?style=flat-square&logo=mongodb&logoColor=22C55E">
+        <img src="https://img.shields.io/badge/WebSockets-111827?style=flat-square">
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🔧 <a href="https://github.com/EricKColl/ReparaYa-Producto3-Laravel">ReparaYa · Laravel</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/ReparaYa-Producto3-Laravel">
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=ReparaYa-Producto3-Laravel&theme=tokyonight&hide_border=true" alt="ReparaYa Producto 3 Laravel"/>
+        </a>
+      </p>
+      <p><strong>Migration of the ReparaYa repair-management system to Laravel</strong>, with database integration and MVC architecture.</p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/PHP-111827?style=flat-square&logo=php&logoColor=777BB4">
+        <img src="https://img.shields.io/badge/Laravel-111827?style=flat-square&logo=laravel&logoColor=FF2D20">
+        <img src="https://img.shields.io/badge/MVC-111827?style=flat-square">
+        <img src="https://img.shields.io/badge/MySQL-111827?style=flat-square&logo=mysql&logoColor=4479A1">
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🛠 <a href="https://github.com/EricKColl/ReparaYa-Producto2">ReparaYa · PHP + Docker</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/ReparaYa-Producto2">
+          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=ReparaYa-Producto2&theme=tokyonight&hide_border=true" alt="ReparaYa Producto 2"/>
+        </a>
+      </p>
+      <p><strong>Repair-management web application</strong> built in framework-less PHP, with MVC architecture, MySQL and Docker.</p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/PHP-111827?style=flat-square&logo=php&logoColor=777BB4">
+        <img src="https://img.shields.io/badge/MySQL-111827?style=flat-square&logo=mysql&logoColor=4479A1">
+        <img src="https://img.shields.io/badge/Docker-111827?style=flat-square&logo=docker&logoColor=2496ED">
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters · Producto 2</a></h3>
       <p align="center">
         <a href="https://github.com/EricKColl/BugBusters-Producto2">
           <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=BugBusters-Producto2&theme=tokyonight&hide_border=true" alt="BugBusters Producto 2"/>
@@ -220,40 +268,37 @@ graph LR
         <img src="https://img.shields.io/badge/JUnit-111827?style=flat-square&logo=junit5&logoColor=25A162">
       </p>
     </td>
-    <td width="50%" valign="top">
-      <h3 align="center">💼 <a href="https://github.com/EricKColl/full-stack-attack-jobboard">Full Stack Attack JobBoard</a></h3>
-      <p align="center">
-        <a href="https://github.com/EricKColl/full-stack-attack-jobboard">
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=full-stack-attack-jobboard&theme=tokyonight&hide_border=true" alt="Full Stack Attack JobBoard"/>
-        </a>
-      </p>
-      <p><strong>Frontend project</strong> built around job platform concepts, using web technologies and structured interface development.</p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/HTML5-111827?style=flat-square&logo=html5&logoColor=E34F26">
-        <img src="https://img.shields.io/badge/CSS3-111827?style=flat-square&logo=css3&logoColor=1572B6">
-        <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E">
-      </p>
-    </td>
   </tr>
 </table>
 
-<p align="center"><em>More projects coming soon...</em></p>
+<details>
+<summary><strong>📂 Full project ecosystem — three product lines, built step by step</strong></summary>
+<br/>
+
+| Product line | Stack | Iterations |
+|:--|:--|:--|
+| 💼 **FullStackAttack — JobConnect** | HTML · CSS · Bootstrap · JS · GraphQL · MongoDB · WebSockets | [Producto 1](https://github.com/EricKColl/FullStackAttack-Project) → [Producto 2](https://github.com/EricKColl/FullStackAttack-Producto2-Individual-) → [Producto 3](https://github.com/EricKColl/FullStackAttack-Producto3) → [Producto 4](https://github.com/EricKColl/FullStackAttack-Producto4) |
+| 🔧 **ReparaYa** | PHP · MVC · MySQL · Docker · Laravel · WordPress | [Producto 2](https://github.com/EricKColl/ReparaYa-Producto2) → [Producto 3 (Laravel)](https://github.com/EricKColl/ReparaYa-Producto3-Laravel) → [Producto 4 (WordPress)](https://github.com/EricKColl/ReparaYa-Producto4-WordPress) |
+| 🐞 **BugBusters** | Java · MVC · Generics · Exceptions · JUnit | [Producto 1](https://github.com/EricKColl/BugBusters-Producto1) → [Producto 2](https://github.com/EricKColl/BugBusters-Producto2) → [Producto 4](https://github.com/EricKColl/BugBustersProducto4) |
+| 🌐 **Trendtech** | HTML · CSS · JavaScript | [Immersive tech-trends web portal](https://github.com/EricKColl/Trendtech) |
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## 📊 GitHub Activity & Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=ErickColl&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170">
-  <img src="https://streak-stats.demolab.com?user=ErickColl&theme=tokyonight&hide_border=true" height="170">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=EricKColl&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170">
+  <img src="https://streak-stats.demolab.com?user=EricKColl&theme=tokyonight&hide_border=true" height="170">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ErickColl&layout=compact&theme=tokyonight&hide_border=true" height="170">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=EricKColl&layout=compact&theme=tokyonight&hide_border=true" height="170">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ErickColl&theme=tokyo-night&hide_border=true&area=true" width="95%">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=EricKColl&theme=tokyo-night&hide_border=true&area=true" width="95%">
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
@@ -265,7 +310,7 @@ graph LR
 | | |
 |:--:|:--|
 | 📧 **Email** | [erickcollrodriguez@gmail.com](mailto:erickcollrodriguez@gmail.com) |
-| 🐙 **GitHub** | [github.com/ErickColl](https://github.com/ErickColl) |
+| 🐙 **GitHub** | [github.com/EricKColl](https://github.com/EricKColl) |
 
 </div>
 
