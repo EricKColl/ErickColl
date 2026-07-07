@@ -26,7 +26,7 @@
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🧭 About Me
 
@@ -48,7 +48,7 @@ My goal is to grow into a versatile developer capable of building **practical, s
 
 At the same time, I actively explore the practical use of AI in both **technical** and **creative** environments. I work with tools such as **Claude**, **ChatGPT**, **Codex**, **DeepSeek**, **Microsoft Copilot**, **Google Gemini**, **Suno AI**, and different **AI agents** to support coding workflows, research, prompt design, automation, content generation, digital productivity, and creative experimentation.
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🗺️ My Journey
 
@@ -66,7 +66,7 @@ graph LR
     style E fill:#0ea5e9,stroke:#ffffff,color:#ffffff
 ```
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🎯 Core Profile
 
@@ -93,7 +93,7 @@ graph LR
   </tr>
 </table>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🛠 Tech Stack
 
@@ -168,7 +168,7 @@ graph LR
 </p>
 </details>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🤖 AI & Digital Workflow Interests
 
@@ -181,7 +181,7 @@ graph LR
 | 🎵 **Creative Workflows** | AI-assisted music, content creation, and digital media workflows, including tools such as Suno AI |
 | 🔁 **Continuous Exploration** | Automation, prompt design, and practical AI integration |
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🎯 Current Goals
 
@@ -202,7 +202,7 @@ graph LR
   <img src="https://img.shields.io/badge/Adaptability%20%26%20Continuous%20Learning-1d4ed8?style=for-the-badge">
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🚀 Featured Projects
 
@@ -284,7 +284,7 @@ graph LR
 
 </details>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 📊 GitHub Activity & Stats
 
@@ -301,7 +301,7 @@ graph LR
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=EricKColl&theme=tokyo-night&hide_border=true&area=true" width="95%">
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 📬 Contact
 
@@ -314,7 +314,7 @@ graph LR
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="assets/divider.svg" width="100%" alt="divider">
 
 ## 🧠 Philosophy
 
