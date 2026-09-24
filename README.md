@@ -199,6 +199,27 @@ graph LR
 
 <table>
   <tr>
+    <td colspan="2" valign="top">
+      <h3 align="center">🏨 <a href="https://github.com/EricKColl/hotelscout">HotelScout · Hotel Finder PWA</a></h3>
+      <p align="center">
+        <a href="https://github.com/EricKColl/hotelscout">
+          <img src="assets/cards/hotelscout.svg" alt="HotelScout"/>
+        </a>
+      </p>
+      <p align="center"><strong>Progressive Web App that finds real accommodation near a station, an airport or an address</strong> using OpenStreetMap data, with an interactive map, filters, favourites and a Booking.com search link — no accounts, no trackers, €0 running cost.</p>
+      <p align="center"><a href="https://hotelscout.pages.dev"><strong>🔗 Live demo → hotelscout.pages.dev</strong></a></p>
+      <p align="center">
+        <img src="https://img.shields.io/badge/React-111827?style=flat-square&logo=react&logoColor=61DAFB">
+        <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6">
+        <img src="https://img.shields.io/badge/Vite-111827?style=flat-square&logo=vite&logoColor=646CFF">
+        <img src="https://img.shields.io/badge/Tailwind%20CSS-111827?style=flat-square&logo=tailwindcss&logoColor=06B6D4">
+        <img src="https://img.shields.io/badge/Leaflet-111827?style=flat-square&logo=leaflet&logoColor=199900">
+        <img src="https://img.shields.io/badge/Cloudflare%20Pages-111827?style=flat-square&logo=cloudflarepages&logoColor=F38020">
+        <img src="https://img.shields.io/badge/PWA-111827?style=flat-square&logo=pwa&logoColor=5A0FC8">
+      </p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3 align="center">💼 <a href="https://github.com/EricKColl/FullStackAttack-Producto4">FullStackAttack · Producto 4</a></h3>
       <p align="center">
@@ -268,6 +289,7 @@ graph LR
 
 | Product line | Stack | Iterations |
 |:--|:--|:--|
+| 🏨 **HotelScout** | React · TypeScript · Vite · Tailwind CSS · Leaflet · Cloudflare Pages · PWA | [Hotel finder PWA](https://github.com/EricKColl/hotelscout) · [Live demo](https://hotelscout.pages.dev) |
 | 💼 **FullStackAttack — JobConnect** | HTML · CSS · Bootstrap · JS · GraphQL · MongoDB · WebSockets | [Producto 1](https://github.com/EricKColl/FullStackAttack-Project) → [Producto 2](https://github.com/EricKColl/FullStackAttack-Producto2-Individual-) → [Producto 3](https://github.com/EricKColl/FullStackAttack-Producto3) → [Producto 4](https://github.com/EricKColl/FullStackAttack-Producto4) |
 | 🔧 **ReparaYa** | PHP · MVC · MySQL · Docker · Laravel · WordPress | [Producto 2](https://github.com/EricKColl/ReparaYa-Producto2) → [Producto 3 (Laravel)](https://github.com/EricKColl/ReparaYa-Producto3-Laravel) → [Producto 4 (WordPress)](https://github.com/EricKColl/ReparaYa-Producto4-WordPress) |
 | 🐞 **BugBusters** | Java · MVC · Generics · Exceptions · JUnit | [Producto 1](https://github.com/EricKColl/BugBusters-Producto1) → [Producto 2](https://github.com/EricKColl/BugBusters-Producto2) → [Producto 4](https://github.com/EricKColl/BugBustersProducto4) |

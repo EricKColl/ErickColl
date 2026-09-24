@@ -7,11 +7,17 @@ import { mkdir, writeFile } from "node:fs/promises";
 const USERNAME = "EricKColl";
 const DISPLAY_NAME = "Erick Coll";
 const PINNED_REPOS = [
+  "hotelscout",
   "FullStackAttack-Producto4",
   "ReparaYa-Producto3-Laravel",
   "ReparaYa-Producto2",
   "BugBusters-Producto2",
 ];
+// Used only while the repository has no description set on GitHub.
+const DESCRIPTION_FALLBACKS = {
+  hotelscout:
+    "PWA que localiza alojamientos reales cerca de una estación, un aeropuerto o una dirección con datos de OpenStreetMap.",
+};
 const LANGS_COUNT = 6;
 const OUT_DIR = new URL("../assets/cards/", import.meta.url);
 
@@ -306,7 +312,11 @@ async function main() {
   };
 
   for (const name of PINNED_REPOS) {
-    await attempt(`pin ${name}`, async () => write(`${name}.svg`, renderPinCard(await api(`/repos/${USERNAME}/${name}`))));
+    await attempt(`pin ${name}`, async () => {
+      const repo = await api(`/repos/${USERNAME}/${name}`);
+      repo.description ||= DESCRIPTION_FALLBACKS[name];
+      await write(`${name}.svg`, renderPinCard(repo));
+    });
   }
 
   let repos;
