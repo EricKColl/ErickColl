@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="165" viewBox="0 0 300 165" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Most Used Languages</title>
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #70a5fd; }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #38bdae; }
+  </style>
+  <rect x="0.5" y="0.5" rx="4.5" width="299" height="164" fill="#1a1b27"/>
+  <text x="25" y="35" class="header">Most Used Languages</text>
+  <mask id="bar-mask"><rect x="0" y="0" width="250" height="8" rx="5" fill="white"/></mask>
+  <g transform="translate(25, 55)" mask="url(#bar-mask)"><rect x="0.00" y="0" width="106.23" height="8" fill="#e34c26"/><rect x="106.23" y="0" width="40.28" height="8" fill="#4F5D95"/><rect x="146.52" y="0" width="36.94" height="8" fill="#f1e05a"/><rect x="183.45" y="0" width="29.88" height="8" fill="#f7523f"/><rect x="213.33" y="0" width="24.69" height="8" fill="#663399"/><rect x="238.02" y="0" width="11.98" height="8" fill="#3178c6"/></g>
+  <g transform="translate(25, 80)">
+    <g transform="translate(0, 0)">
+      <circle cx="5" cy="6" r="5" fill="#e34c26"/>
+      <text x="15" y="10" class="lang-name">HTML 42.49%</text>
+    </g>
+    <g transform="translate(150, 0)">
+      <circle cx="5" cy="6" r="5" fill="#4F5D95"/>
+      <text x="15" y="10" class="lang-name">PHP 16.11%</text>
+    </g>
+    <g transform="translate(0, 25)">
+      <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
+      <text x="15" y="10" class="lang-name">JavaScript 14.77%</text>
+    </g>
+    <g transform="translate(150, 25)">
+      <circle cx="5" cy="6" r="5" fill="#f7523f"/>
+      <text x="15" y="10" class="lang-name">Blade 11.95%</text>
+    </g>
+    <g transform="translate(0, 50)">
+      <circle cx="5" cy="6" r="5" fill="#663399"/>
+      <text x="15" y="10" class="lang-name">CSS 9.88%</text>
+    </g>
+    <g transform="translate(150, 50)">
+      <circle cx="5" cy="6" r="5" fill="#3178c6"/>
+      <text x="15" y="10" class="lang-name">TypeScript 4.79%</text>
+    </g>
+  </g>
+</svg>
