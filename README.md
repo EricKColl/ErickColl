@@ -203,7 +203,7 @@ graph LR
       <h3 align="center">💼 <a href="https://github.com/EricKColl/FullStackAttack-Producto4">FullStackAttack · Producto 4</a></h3>
       <p align="center">
         <a href="https://github.com/EricKColl/FullStackAttack-Producto4">
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=FullStackAttack-Producto4&theme=tokyonight&hide_border=true" alt="FullStackAttack Producto 4"/>
+          <img src="assets/cards/FullStackAttack-Producto4.svg" alt="FullStackAttack Producto 4"/>
         </a>
       </p>
       <p><strong>Full-Stack JavaScript application</strong> integrating frontend, GraphQL, MongoDB, Mongoose, Fetch and WebSockets — the most complete iteration of the JobConnect platform.</p>
@@ -218,7 +218,7 @@ graph LR
       <h3 align="center">🔧 <a href="https://github.com/EricKColl/ReparaYa-Producto3-Laravel">ReparaYa · Laravel</a></h3>
       <p align="center">
         <a href="https://github.com/EricKColl/ReparaYa-Producto3-Laravel">
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=ReparaYa-Producto3-Laravel&theme=tokyonight&hide_border=true" alt="ReparaYa Producto 3 Laravel"/>
+          <img src="assets/cards/ReparaYa-Producto3-Laravel.svg" alt="ReparaYa Producto 3 Laravel"/>
         </a>
       </p>
       <p><strong>Migration of the ReparaYa repair-management system to Laravel</strong>, with database integration and MVC architecture.</p>
@@ -235,7 +235,7 @@ graph LR
       <h3 align="center">🛠 <a href="https://github.com/EricKColl/ReparaYa-Producto2">ReparaYa · PHP + Docker</a></h3>
       <p align="center">
         <a href="https://github.com/EricKColl/ReparaYa-Producto2">
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=ReparaYa-Producto2&theme=tokyonight&hide_border=true" alt="ReparaYa Producto 2"/>
+          <img src="assets/cards/ReparaYa-Producto2.svg" alt="ReparaYa Producto 2"/>
         </a>
       </p>
       <p><strong>Repair-management web application</strong> built in framework-less PHP, with MVC architecture, MySQL and Docker.</p>
@@ -249,7 +249,7 @@ graph LR
       <h3 align="center">🛒 <a href="https://github.com/EricKColl/BugBusters-Producto2">BugBusters · Producto 2</a></h3>
       <p align="center">
         <a href="https://github.com/EricKColl/BugBusters-Producto2">
-          <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=EricKColl&repo=BugBusters-Producto2&theme=tokyonight&hide_border=true" alt="BugBusters Producto 2"/>
+          <img src="assets/cards/BugBusters-Producto2.svg" alt="BugBusters Producto 2"/>
         </a>
       </p>
       <p>Collaborative <strong>Java project</strong> focused on MVC architecture, generics, exceptions, JUnit testing, and console-based business logic.</p>
@@ -280,12 +280,12 @@ graph LR
 ## 📊 GitHub Activity & Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=EricKColl&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="170">
+  <img src="assets/cards/stats.svg" height="170" alt="GitHub stats">
   <img src="https://streak-stats.demolab.com?user=EricKColl&theme=tokyonight&hide_border=true" height="170">
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=EricKColl&layout=compact&theme=tokyonight&hide_border=true" height="170">
+  <img src="assets/cards/top-langs.svg" height="170" alt="Most used languages">
 </p>
 
 <p align="center">
