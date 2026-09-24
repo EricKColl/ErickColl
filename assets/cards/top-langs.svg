@@ -7,7 +7,7 @@
   <rect x="0.5" y="0.5" rx="4.5" width="299" height="164" fill="#1a1b27"/>
   <text x="25" y="35" class="header">Most Used Languages</text>
   <mask id="bar-mask"><rect x="0" y="0" width="250" height="8" rx="5" fill="white"/></mask>
-  <g transform="translate(25, 55)" mask="url(#bar-mask)"><rect x="0.00" y="0" width="106.01" height="8" fill="#e34c26"/><rect x="106.01" y="0" width="40.20" height="8" fill="#4F5D95"/><rect x="146.21" y="0" width="37.38" height="8" fill="#f1e05a"/><rect x="183.59" y="0" width="29.81" height="8" fill="#f7523f"/><rect x="213.41" y="0" width="24.64" height="8" fill="#663399"/><rect x="238.05" y="0" width="11.95" height="8" fill="#3178c6"/></g>
+  <g transform="translate(25, 55)" mask="url(#bar-mask)"><rect x="0.00" y="0" width="106.01" height="8" fill="#e34c26"/><rect x="106.01" y="0" width="40.20" height="8" fill="#4F5D95"/><rect x="146.20" y="0" width="37.39" height="8" fill="#f1e05a"/><rect x="183.60" y="0" width="29.81" height="8" fill="#f7523f"/><rect x="213.41" y="0" width="24.64" height="8" fill="#663399"/><rect x="238.05" y="0" width="11.95" height="8" fill="#3178c6"/></g>
   <g transform="translate(25, 80)">
     <g transform="translate(0, 0)">
       <circle cx="5" cy="6" r="5" fill="#e34c26"/>
@@ -19,7 +19,7 @@
     </g>
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#f1e05a"/>
-      <text x="15" y="10" class="lang-name">JavaScript 14.95%</text>
+      <text x="15" y="10" class="lang-name">JavaScript 14.96%</text>
     </g>
     <g transform="translate(150, 25)">
       <circle cx="5" cy="6" r="5" fill="#f7523f"/>
