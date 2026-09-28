@@ -8,6 +8,7 @@ const USERNAME = "EricKColl";
 const DISPLAY_NAME = "Erick Coll";
 const PINNED_REPOS = [
   "hotelscout",
+  "LeriFitness",
   "FullStackAttack-Producto4",
   "ReparaYa-Producto3-Laravel",
   "ReparaYa-Producto2",
@@ -17,6 +18,8 @@ const PINNED_REPOS = [
 const DESCRIPTION_FALLBACKS = {
   hotelscout:
     "PWA que localiza alojamientos reales cerca de una estación, un aeropuerto o una dirección con datos de OpenStreetMap.",
+  LeriFitness:
+    "Forja: PWA local-first de entrenamiento de gimnasio personalizado, con un motor de planes basado en reglas y datos que no salen del dispositivo.",
 };
 const LANGS_COUNT = 6;
 const OUT_DIR = new URL("../assets/cards/", import.meta.url);
