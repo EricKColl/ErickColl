@@ -55,22 +55,6 @@ export function sansWidth(text, size, bold = false) {
   return (units / 1000) * size * 1.08 * (bold ? 1.06 : 1);
 }
 
-export function wrapSans(text, maxWidth, size) {
-  const lines = [];
-  let line = "";
-  for (const word of String(text).split(/\s+/).filter(Boolean)) {
-    const next = line ? `${line} ${word}` : word;
-    if (line && sansWidth(next, size) > maxWidth) {
-      lines.push(line);
-      line = word;
-    } else {
-      line = next;
-    }
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
 // Base stylesheet for every asset. Motion is decorative only, so it is fully disabled for
 // visitors who ask for reduced motion; every element's resting state is its final state.
 export function baseStyle(extra = "") {

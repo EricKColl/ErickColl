@@ -1,7 +1,7 @@
 name: Update profile telemetry
 
-# Regenerates assets/telemetry/*.svg (stats, languages, contribution matrix, latest pushes)
-# from the GitHub API once a day. Only commits when the rendered panels actually changed.
+# Regenerates assets/telemetry/telemetry.svg (activity totals, languages, latest pushes)
+# from the GitHub API once a day. Only commits when the rendered panel actually changed.
 on:
   schedule:
     - cron: "30 4 * * *"
@@ -31,13 +31,13 @@ jobs:
           node-version: 22
 
       # Dependency-free script: no `npm ci`, nothing third-party runs with the token.
-      - name: Generate telemetry panels
+      - name: Generate telemetry panel
         run: node scripts/generate-cards.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Runs even if generation failed, so a previous good panel is never replaced by an error.
-      - name: Commit updated panels
+      # Runs even if generation failed, so the previous good panel is never replaced by an error.
+      - name: Commit updated panel
         if: ${{ !cancelled() }}
         run: |
           git add assets/telemetry
