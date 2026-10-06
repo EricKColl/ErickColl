@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="648" viewBox="0 0 1000 648" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">FORJA — Personal gym training PWA</title>
+<desc id="desc">Local-first training app: plans come from a deterministic, fully tested rule engine built on evidence-backed training principles — no AI decides your plan. Works offline and keeps health data on the device. Architecture: INTERFACE React 19 UI (Tailwind · shadcn/ui, Motion · i18n) → ENGINE Rule engine (pure TypeScript, deterministic · tested) → LOCAL DATA IndexedDB (Dexie · Zustand, Zod schemas); optional modules: Supabase sync (EU · RLS · no health data), 3D anatomy (three.js · React Three Fiber), AI glossary (WebLLM · Gemini optional). KEY SYSTEMS: Full offline PWA (Workbox), installable from the browser; Interactive 3D anatomy model, loaded on demand; Passwordless optional cloud sync between devices; CI/CD to Cloudflare Pages with GitHub Actions. DESIGN PRINCIPLES: 0 AI-decided plans, 100% works offline, TS strict mode, EU cloud region. Stack: React 19, TypeScript, Vite, Tailwind CSS 4, Three.js, Dexie, Supabase, Vitest, PWA. Live at forja-13u.pages.dev.</desc>
+<style>.mono { font-family: 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; } .sans { font-family: Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; } .code { font: 600 11.5px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 2px; fill: #38bdf8; } .title { font: 500 11.5px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 2.5px; fill: #e8eef9; } .meta { font: 500 11px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 1.2px; fill: #6b7fa6; } .label { font: 600 10px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 1.8px; fill: #6b7fa6; } .body { font: 400 15px Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; fill: #a3b3cf; } .strong { font: 600 15px Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; fill: #e8eef9; } @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } } @keyframes breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } } @keyframes spin { to { transform: rotate(360deg); } } @keyframes spin-reverse { to { transform: rotate(-360deg); } } @keyframes fade-in { from { opacity: 0; } } @keyframes rise { from { opacity: 0; transform: translateY(8px); } } @keyframes flow { to { stroke-dashoffset: -40; } } .pulse { animation: pulse 2.4s ease-in-out infinite; } .breathe { animation: breathe 4s ease-in-out infinite; } .flow { stroke-dasharray: 4 16; animation: flow 1.6s linear infinite; } @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }</style>
+<defs>
+<linearGradient id="screen-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070d1c"/><stop offset="1" stop-color="#04070f"/></linearGradient>
+<linearGradient id="screen-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".6"/><stop offset=".5" stop-color="#1d4ed8" stop-opacity=".2"/><stop offset="1" stop-color="#a78bfa" stop-opacity=".5"/></linearGradient>
+<pattern id="screen-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#bae6fd" fill-opacity=".13"/></pattern>
+<radialGradient id="screen-fade" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<mask id="screen-vignette"><rect width="1000" height="648" fill="url(#screen-fade)"/></mask>
+<radialGradient id="screen-aura" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1d4ed8" stop-opacity=".28"/><stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/></radialGradient>
+<clipPath id="screen-clip"><rect x="1" y="1" width="998" height="646" rx="16"/></clipPath><linearGradient id="title-fill" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#bae6fd"/></linearGradient></defs>
+
+<rect x=".5" y=".5" width="999" height="647" rx="16" fill="url(#screen-bg)"/>
+<g clip-path="url(#screen-clip)">
+  <rect width="1000" height="648" fill="url(#screen-grid)" mask="url(#screen-vignette)"/>
+  <ellipse cx="500" cy="291.6" rx="550" ry="388.8" fill="url(#screen-aura)"/>
+</g>
+<rect x=".5" y=".5" width="999" height="647" rx="16" stroke="url(#screen-edge)"/>
+<path d="M9 23V9H23M977 9H991V23M991 625V639H977M23 639H9V625" stroke="#38bdf8" stroke-opacity=".75" stroke-width="1.5" stroke-linecap="round"/>
+<defs><linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#38bdf8" stop-opacity=".45"/><stop offset=".6" stop-color="#3b82f6" stop-opacity=".15"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
+<g transform="translate(30 23) scale(1)">
+  <circle r="7.5" stroke="#38bdf8" stroke-opacity=".55"/>
+  <circle r="4.5" stroke="#a78bfa" stroke-opacity=".8" stroke-dasharray="3 2.5"/>
+  <circle r="1.8" fill="#bae6fd"/>
+</g>
+<text x="48" y="27" class="code">ECR://MODULE/02</text>
+<text x="191.49999999999997" y="27" class="title">PROJECT MODULE</text>
+
+<rect x="1" y="46" width="998" height="1" fill="url(#hairline)"/><g>
+  <circle cx="755.8" cy="23.15" r="6.050000000000001" fill="#34d399" fill-opacity=".18" class="pulse"/>
+  <circle cx="755.8" cy="23.15" r="3.08" fill="#34d399"/>
+  <text x="766.8" y="27" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" font-weight="700" letter-spacing="1.6" fill="#34d399">LIVE</text>
+</g>
+    <text x="974" y="27" class="meta" text-anchor="end" style="fill:#bae6fd">forja-13u.pages.dev</text><path fill="url(#title-fill)" d="M45.6 104L42.8 104L42.8 81.5L64 81.5L64 83.8L45.6 83.8L45.6 91.3L63.2 91.3L63.2 93.7L45.6 93.7M86.4 104.5L80.5 104.5Q77.2 104.5 75.1 104Q72.9 103.6 71.7 102.4Q70.5 101.2 70.1 98.9Q69.6 96.7 69.6 93L69.6 92.5Q69.6 89.5 69.9 87.4Q70.2 85.4 70.9 84.1Q71.6 82.9 72.8 82.2Q74.1 81.5 76 81.3Q77.8 81 80.5 81L86.4 81Q89 81 90.9 81.3Q92.8 81.5 94 82.2Q95.2 82.9 96 84.1Q96.7 85.4 97 87.4Q97.3 89.5 97.3 92.5L97.3 93Q97.3 96.7 96.8 98.9Q96.3 101.2 95.1 102.4Q93.9 103.6 91.8 104Q89.7 104.5 86.4 104.5M80.5 102L86.4 102Q88.5 102 89.9 101.9Q91.3 101.7 92.2 101.3Q93.1 100.8 93.6 99.8Q94.1 98.8 94.3 97.2Q94.4 95.5 94.4 93L94.4 92.5Q94.4 89.9 94.3 88.2Q94.1 86.5 93.6 85.6Q93.1 84.6 92.2 84.2Q91.3 83.7 89.9 83.6Q88.5 83.5 86.4 83.5L80.5 83.5Q78.4 83.5 76.9 83.6Q75.5 83.7 74.6 84.2Q73.7 84.6 73.2 85.6Q72.8 86.5 72.6 88.2Q72.4 89.9 72.4 92.5L72.4 93Q72.4 95.5 72.6 97.2Q72.8 98.8 73.2 99.8Q73.7 100.8 74.6 101.3Q75.5 101.7 76.9 101.9Q78.4 102 80.5 102M104.4 104L104.4 81.5L119.5 81.5Q122.8 81.5 124.8 81.8Q126.8 82.1 127.8 82.8Q128.9 83.5 129.2 84.8Q129.6 86 129.6 87.9L129.6 88.5Q129.6 90.3 129.2 91.5Q128.8 92.8 127.6 93.6Q126.4 94.4 124.1 94.7L129 104L126.1 104L121.4 94.9Q121.1 94.9 120.7 94.9Q120.4 94.9 120.1 94.9L107.2 94.9L107.2 104L104.4 104M107.2 83.9L107.2 92.5L119.7 92.5Q122.2 92.5 123.6 92.3Q125 92.1 125.7 91.7Q126.4 91.3 126.6 90.5Q126.8 89.7 126.8 88.5L126.8 87.9Q126.8 86.5 126.5 85.7Q126.3 84.9 125.5 84.5Q124.7 84.2 123.1 84Q121.5 83.9 118.9 83.9M149.5 104L142.9 104Q140.1 104 138.6 103.2Q137 102.4 136.6 100Q136.4 98.7 136.4 96.5L136.4 95.6L139.2 95.6L139.2 96.5Q139.2 99.8 140 100.9Q140.5 101.4 141.2 101.6Q141.9 101.7 142.9 101.7L149.5 101.7Q152 101.7 153.1 100.8Q154.2 99.9 154.2 97.4L154.2 81.5L157 81.5L157 97.4Q157 101 155.4 102.5Q153.7 104 149.5 104M166.2 104L163 104L176.1 81.5L179.8 81.5L193 104L189.7 104L186.9 98.8L169.1 98.8L166.2 104M178 83.4L170.5 96.5L185.5 96.5"/><text x="211.9017578125" y="102" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" fill="#a3b3cf">Personal gym training PWA</text><text x="40" y="138" class="body">Local-first training app: plans come from a deterministic, fully tested rule engine built on evidence-backed training principles —</text><text x="40" y="160" class="body">no AI decides your plan. Works offline and keeps health data on the device.</text><text x="40" y="200" class="label">ARCHITECTURE</text><g>
+    <rect x="40" y="214" width="244" height="100" rx="10" fill="#0f1a33" fill-opacity=".85" stroke="#2b4170"/>
+    <path d="M54 214.5H110" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <text x="56" y="237" class="label" style="fill:#38bdf8">INTERFACE</text>
+    <text x="56" y="259" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#e8eef9">React 19 UI</text>
+    <text x="56" y="280" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">Tailwind · shadcn/ui</text><text x="56" y="296" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">Motion · i18n</text>
+  </g><g>
+    <path d="M290 264H372" stroke="#2b4170" stroke-width="1.5"/>
+    <path d="M290 264H372" class="flow" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M365 259.5L372 264L365 268.5" stroke="#38bdf8" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="331" y="254" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">profile</text>
+  </g><g>
+    <rect x="378" y="214" width="244" height="100" rx="10" fill="#0f1a33" fill-opacity=".85" stroke="#2b4170"/>
+    <path d="M392 214.5H448" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+    <text x="394" y="237" class="label" style="fill:#a78bfa">ENGINE</text>
+    <text x="394" y="259" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#e8eef9">Rule engine</text>
+    <text x="394" y="280" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">pure TypeScript</text><text x="394" y="296" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">deterministic · tested</text>
+  </g><g>
+    <path d="M628 264H710" stroke="#2b4170" stroke-width="1.5"/>
+    <path d="M628 264H710" class="flow" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M703 259.5L710 264L703 268.5" stroke="#38bdf8" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="669" y="254" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">plan</text>
+  </g><g>
+    <rect x="716" y="214" width="244" height="100" rx="10" fill="#0f1a33" fill-opacity=".85" stroke="#2b4170"/>
+    <path d="M730 214.5H786" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <text x="732" y="237" class="label" style="fill:#38bdf8">LOCAL DATA</text>
+    <text x="732" y="259" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#e8eef9">IndexedDB</text>
+    <text x="732" y="280" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">Dexie · Zustand</text><text x="732" y="296" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">Zod schemas</text>
+  </g><path d="M162 314V340H838" stroke="#a78bfa" stroke-opacity=".7" stroke-dasharray="4 5"/><text x="172" y="333" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">optional · lazy-loaded modules</text><path d="M162 340V356" stroke="#a78bfa" stroke-opacity=".7" stroke-dasharray="4 5"/>
+        <circle cx="162" cy="340" r="2.5" fill="#a78bfa"/>
+        <rect x="40" y="356" width="244" height="56" rx="9" fill="#0a1224" stroke="#a78bfa" stroke-opacity=".45" stroke-dasharray="3 3"/>
+        <text x="56" y="378" class="label" style="fill:#a78bfa">OPTIONAL</text>
+        <text x="126.4" y="378" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#e8eef9">Supabase sync</text>
+        <text x="56" y="398" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">EU · RLS · no health data</text><path d="M500 340V356" stroke="#a78bfa" stroke-opacity=".7" stroke-dasharray="4 5"/>
+        <circle cx="500" cy="340" r="2.5" fill="#a78bfa"/>
+        <rect x="378" y="356" width="244" height="56" rx="9" fill="#0a1224" stroke="#a78bfa" stroke-opacity=".45" stroke-dasharray="3 3"/>
+        <text x="394" y="378" class="label" style="fill:#a78bfa">LAZY</text>
+        <text x="433.2" y="378" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#e8eef9">3D anatomy</text>
+        <text x="394" y="398" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">three.js · React Three Fiber</text><path d="M838 340V356" stroke="#a78bfa" stroke-opacity=".7" stroke-dasharray="4 5"/>
+        <circle cx="838" cy="340" r="2.5" fill="#a78bfa"/>
+        <rect x="716" y="356" width="244" height="56" rx="9" fill="#0a1224" stroke="#a78bfa" stroke-opacity=".45" stroke-dasharray="3 3"/>
+        <text x="732" y="378" class="label" style="fill:#a78bfa">ON-DEVICE</text>
+        <text x="810.2" y="378" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#e8eef9">AI glossary</text>
+        <text x="732" y="398" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11" fill="#a3b3cf">WebLLM · Gemini optional</text><text x="40" y="448" class="label">KEY SYSTEMS</text><path d="M40 469l4-4 4 4-4 4z" fill="#38bdf8"/>
+      <text x="58" y="474" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#e8eef9">Full offline PWA (Workbox), installable from the browser</text><path d="M40 492l4-4 4 4-4 4z" fill="#38bdf8"/>
+      <text x="58" y="497" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#e8eef9">Interactive 3D anatomy model, loaded on demand</text><path d="M40 515l4-4 4 4-4 4z" fill="#38bdf8"/>
+      <text x="58" y="520" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#e8eef9">Passwordless optional cloud sync between devices</text><path d="M40 538l4-4 4 4-4 4z" fill="#38bdf8"/>
+      <text x="58" y="543" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#e8eef9">CI/CD to Cloudflare Pages with GitHub Actions</text><text x="560" y="448" class="label">DESIGN PRINCIPLES</text><g>
+      <rect x="560" y="460" width="92.5" height="86" rx="9" fill="#0a1224" stroke="#1c2b4d"/>
+      <text x="606.3" y="504" text-anchor="middle" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="700" fill="#38bdf8">0</text>
+      <text x="606.3" y="524" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">AI-decided</text><text x="606.3" y="536" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">plans</text>
+    </g><g>
+      <rect x="662.5" y="460" width="92.5" height="86" rx="9" fill="#0a1224" stroke="#1c2b4d"/>
+      <text x="708.8" y="504" text-anchor="middle" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="700" fill="#38bdf8">100%</text>
+      <text x="708.8" y="524" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">works offline</text>
+    </g><g>
+      <rect x="765" y="460" width="92.5" height="86" rx="9" fill="#0a1224" stroke="#1c2b4d"/>
+      <text x="811.3" y="504" text-anchor="middle" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="700" fill="#38bdf8">TS</text>
+      <text x="811.3" y="524" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">strict mode</text>
+    </g><g>
+      <rect x="867.5" y="460" width="92.5" height="86" rx="9" fill="#0a1224" stroke="#1c2b4d"/>
+      <text x="913.8" y="504" text-anchor="middle" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="700" fill="#38bdf8">EU</text>
+      <text x="913.8" y="524" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#a3b3cf">cloud region</text>
+    </g><rect x="40" y="580" width="920" height="1" fill="#1c2b4d"/><g>
+      <rect x="40" y="596" width="94.4" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(50 602) scale(0.5833)" fill="#a3b3cf" d="M14.23 12.00a2.23 2.23 0 0 1-2.23 2.23 2.23 2.23 0 0 1-2.23-2.23 2.23 2.23 0 0 1 2.23-2.23 2.23 2.23 0 0 1 2.23 2.23zm2.64-10.69c-1.34 0-3.10.96-4.88 2.62-1.78-1.65-3.54-2.60-4.88-2.60-.41 0-.78.09-1.10.27-1.37.79-1.68 3.26-.97 6.36C1.98 8.91 0 10.42 0 12.00c0 1.59 1.99 3.09 5.04 4.03-.70 3.11-.39 5.58.98 6.38.32.18.69.27 1.10.27 1.34 0 3.10-.96 4.88-2.62 1.78 1.65 3.54 2.60 4.88 2.60.41 0 .78-.09 1.10-.27 1.37-.79 1.68-3.26.97-6.36C22.02 15.09 24 13.59 24 12.00c0-1.59-1.99-3.09-5.04-4.03.70-3.11.39-5.58-.98-6.38-.31-.18-.68-.27-1.09-.27zm-.00 1.09v.00c.22 0 .40.04.55.12.66.38.95 1.83.73 3.70-.05.46-.14.94-.25 1.44-.96-.23-2.00-.41-3.10-.53-.66-.90-1.34-1.72-2.03-2.44 1.59-1.48 3.08-2.29 4.10-2.29zm-9.77.02c1.01 0 2.51.80 4.11 2.28-.68.72-1.37 1.53-2.02 2.44-1.10.11-2.15.29-3.11.53-.11-.49-.19-.96-.25-1.42-.23-1.86.05-3.32.71-3.70.19-.09.4-.12.56-.13zm4.88 3.05c.45.46.91.99 1.36 1.56-.44-.02-.89-.03-1.34-.03-.46 0-.91.01-1.36.03.44-.57.89-1.09 1.34-1.56zM12 8.1c.74 0 1.47.03 2.20.09.40.58.80 1.20 1.18 1.86.37.64.71 1.29 1.01 1.94-.30.65-.64 1.31-1.01 1.95-.38.66-.77 1.28-1.18 1.87-.72.06-1.46.09-2.21.09-.74 0-1.47-.03-2.20-.09-.40-.58-.80-1.20-1.18-1.86-.37-.64-.71-1.29-1.01-1.94.30-.65.64-1.31 1.01-1.95.38-.66.77-1.28 1.18-1.86.72-.06 1.46-.09 2.21-.09zm-3.63.25c-.24.37-.48.76-.70 1.16-.22.39-.43.78-.63 1.17-.26-.65-.49-1.31-.67-1.94.64-.15 1.31-.28 2.01-.38zm7.26 0c.69.10 1.36.23 2.00.38-.18.63-.40 1.28-.66 1.93-.2-.39-.41-.78-.64-1.17-.22-.39-.46-.77-.70-1.14zm3.06.67c.48.15.94.31 1.37.49 1.73.74 2.85 1.70 2.85 2.47-.00.76-1.12 1.74-2.85 2.47-.42.18-.88.34-1.35.49-.28-.95-.64-1.95-1.1-2.98.45-1.01.81-2.01 1.08-2.96zm-13.39.00c.27.96.64 1.95 1.1 2.98-.45 1.01-.81 2.01-1.08 2.96-.48-.15-.94-.31-1.37-.5-1.73-.73-2.85-1.70-2.85-2.47 0-.76 1.12-1.74 2.85-2.47.42-.18.88-.34 1.35-.49zm11.67 4.28c.26.65.49 1.31.67 1.94-.64.15-1.31.29-2.01.39.24-.37.48-.76.70-1.15.22-.39.43-.78.63-1.18zm-9.94.02c.2.39.41.78.64 1.17.23.39.46.77.70 1.14-.69-.10-1.36-.23-2.00-.38.18-.63.40-1.28.66-1.93zM17.92 16.32c.11.49.2.96.25 1.42.23 1.86-.05 3.32-.71 3.70-.14.09-.33.12-.56.12-1.01 0-2.51-.80-4.11-2.28.68-.72 1.37-1.53 2.02-2.44 1.10-.11 2.15-.3 3.11-.54zm-11.83.01c.96.23 2.00.41 3.10.53.66.90 1.34 1.72 2.03 2.44-1.59 1.48-3.09 2.29-4.11 2.29-.22-.00-.40-.05-.55-.13-.66-.38-.95-1.83-.73-3.70.05-.46.14-.94.25-1.43zm4.56.64c.44.02.89.03 1.34.03.46 0 .91-.01 1.36-.03-.44.57-.89 1.09-1.34 1.56-.45-.47-.91-.99-1.36-1.56z"/>
+      <text x="72" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">React 19</text>
+      
+    </g><g>
+      <rect x="140.4" y="596" width="107" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(150.4 602) scale(0.5833)" fill="#a3b3cf" d="M1.12 0C.50 0 0 .50 0 1.12v21.75C0 23.49.50 24 1.12 24h21.75c.62 0 1.12-.50 1.12-1.12V1.12C24 .50 23.49 0 22.87 0zm17.36 9.75c.61 0 1.15.03 1.62.11a6.38 6.38 0 0 1 1.30.34v2.45a3.95 3.95 0 0 0-.64-.36 5.09 5.09 0 0 0-.71-.26 5.45 5.45 0 0 0-1.42-.2c-.3 0-.57.02-.81.08a2.1 2.1 0 0 0-.62.24c-.17.10-.3.22-.39.37a.88.88 0 0 0-.14.49c0 .19.05.37.15.52.10.15.25.30.44.44s.42.27.69.41c.27.13.58.27.92.41.47.19.89.40 1.26.62.37.22.69.47.96.75.26.27.47.59.61.95.14.35.21.77.21 1.25 0 .65-.12 1.21-.37 1.65a3.03 3.03 0 0 1-1.01 1.08 4.38 4.38 0 0 1-1.48.59c-.56.12-1.16.18-1.79.18a9.91 9.91 0 0 1-1.84-.16 5.54 5.54 0 0 1-1.51-.49v-2.63a5.03 5.03 0 0 0 3.23 1.2c.33 0 .62-.03.87-.09.24-.06.45-.14.62-.25.16-.10.29-.23.37-.38a1.02 1.02 0 0 0-.07-1.08 2.12 2.12 0 0 0-.53-.5 5.59 5.59 0 0 0-.80-.44 27.72 27.72 0 0 0-1.00-.43c-.91-.38-1.60-.85-2.05-1.40-.45-.55-.67-1.22-.67-2.00 0-.61.12-1.14.36-1.58.24-.44.58-.80 1.00-1.08a4.49 4.49 0 0 1 1.47-.62 7.53 7.53 0 0 1 1.77-.20zm-15.11.18h9.56v2.16H9.50v9.64H6.78v-9.64H3.37z"/>
+      <text x="172.4" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">TypeScript</text>
+      
+    </g><g>
+      <rect x="253.4" y="596" width="69.2" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(263.4 602) scale(0.5833)" fill="#a3b3cf" d="M13.05 23.23a.57.57 0 0 1-1.02-.35v-5.20c0-.63-.51-1.14-1.14-1.14H5.14a.57.57 0 0 1-.46-.90l3.77-5.29c.54-.75 0-1.80-.93-1.80H.57a.57.57 0 0 1-.54-.74.6.6 0 0 1 .08-.15L5.00.78a.57.57 0 0 1 .46-.24h14.58a.57.57 0 0 1 .46.90l-3.77 5.29c-.54.75 0 1.80.93 1.80h5.74c.23 0 .42.13.51.32a.56.56 0 0 1-.06.60z"/>
+      <text x="285.4" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Vite</text>
+      
+    </g><g>
+      <rect x="328.6" y="596" width="132.2" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(338.6 602) scale(0.5833)" fill="#a3b3cf" d="M12.00,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.91,0.22,1.56,0.89,2.28,1.62 C13.66,10.61,15.02,12,18.00,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.91-0.22-1.56-0.89-2.28-1.62 C16.33,6.18,14.97,4.8,12.00,4.8z M6.00,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.91,0.22,1.56,0.89,2.28,1.62 c1.17,1.19,2.53,2.57,5.51,2.57c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.91-0.22-1.56-0.89-2.28-1.62 C10.33,13.38,8.97,12,6.00,12z"/>
+      <text x="360.6" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Tailwind CSS 4</text>
+      
+    </g><g>
+      <rect x="466.8" y="596" width="94.4" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(476.8 602) scale(0.5833)" fill="#a3b3cf" d="M.38 0a.26.26 0 0 0-.25.33l2.89 11.71a.26.26 0 0 0 .01.04l2.89 11.70a.26.26 0 0 0 .44.12L23.80 7.15a.26.26 0 0 0-.11-.45l-5.78-1.66a.26.26 0 0 0-.12-.03L6.38 1.71a.26.26 0 0 0-.14-.04L.45.01A.26.26 0 0 0 .38 0zm.37.65L5.71 2.08 1.99 5.66zM6.61 2.34l4.86 1.4-3.65 3.51zm-.52.12l1.21 4.92-4.87-1.4zm6.28 1.53l4.87 1.40-3.66 3.53zm-.52.13l1.20 4.9-4.85-1.39zm6.3 1.53l4.94 1.42-3.71 3.57zm-.52.12l1.21 4.92-4.87-1.39zm-15.43.69l4.96 1.42-3.72 3.58zM8.04 8.15l4.87 1.4-3.66 3.52zm-.51.13l1.23 5.01-4.96-1.43zm6.27 1.53l4.96 1.42-3.73 3.58zm-.52.12l1.23 5.01-4.95-1.43zm-9.63 2.43l4.87 1.40-3.65 3.52zm5.85 1.68l4.86 1.40-3.64 3.51zm-.54.04l1.21 4.92-4.87-1.4zm-3.89 4.02l5.03 1.44-3.78 3.63z"/>
+      <text x="498.8" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Three.js</text>
+      
+    </g><g>
+      <rect x="567.2" y="596" width="75.5" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <g><rect x="577.2" y="602" width="14" height="14" rx="3" stroke="#a3b3cf" stroke-opacity=".7"/>
+<text x="584.2" y="611.5" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="7" font-weight="700" fill="#a3b3cf">DE</text></g>
+      <text x="599.2" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Dexie</text>
+      
+    </g><g>
+      <rect x="648.7" y="596" width="94.4" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(658.7 602) scale(0.5833)" fill="#a3b3cf" d="M11.9 1.03c-.01-.98-1.26-1.41-1.87-.63L.76 12.05C-.33 13.42.65 15.45 2.40 15.45h9.57l.11 7.51c.01.98 1.25 1.40 1.87.63l9.26-11.65c1.09-1.37.11-3.40-1.64-3.40h-9.64z"/>
+      <text x="680.7" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Supabase</text>
+      
+    </g><g>
+      <rect x="749.1" y="596" width="81.8" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(759.1 602) scale(0.5833)" fill="#a3b3cf" d="M11.54 23.3a.61.61 0 0 1-.89.19L.25 15.93A.61.61 0 0 1 0 15.43V6.32c0-.50.56-.79.97-.49l6.35 4.62c.59.43 1.43.25 1.79-.39L14.39.7a.62.62 0 0 1 .53-.31h8.45a.61.61 0 0 1 .53.91z"/>
+      <text x="781.1" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">Vitest</text>
+      
+    </g><g>
+      <rect x="836.9" y="596" width="62.9" height="26" rx="6" fill="#0a1224" stroke="#1c2b4d" stroke-opacity="1"/>
+      <path transform="translate(846.9 602) scale(0.5833)" fill="#a3b3cf" d="M20.59 7.48L24 16.51h-2.50l-.58-1.61h-3.24l.69-1.75h2.00l-.95-2.65 1.18-3.00zm-8.11 0l1.77 5.83L16.75 7.48h2.41l-3.64 9.03h-2.38l-1.63-5.23-1.71 5.23h-2.37l-1.23-2.11 1.21-3.74 1.34 2.66 1.90-5.83h1.85zm-8.74 0c1.06 0 1.87.30 2.42.91a2.64 2.64 0 01.28.36l-1.07 3.31-.38 1.18c-.35.10-.75.15-1.20.15H2.29v3.10H0V7.48zm-.58 1.75h-.86v2.42h.85c.55 0 .94-.11 1.14-.35.18-.21.28-.50.28-.87 0-.36-.10-.65-.32-.87-.21-.21-.58-.32-1.10-.32z"/>
+      <text x="868.9" y="612.8" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="500" fill="#a3b3cf">PWA</text>
+      
+    </g>
+</svg>
