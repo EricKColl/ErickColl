@@ -288,9 +288,8 @@ function hero() {
   const body = `${frame.body}
 <g clip-path="url(#screen-clip)"><g class="scanline"><rect x="0" y="-60" width="${W}" height="58" fill="url(#scan)" opacity=".55"/><rect x="0" y="-2" width="${W}" height="1" fill="${COLORS.cyan}" opacity=".35"/></g></g>
 ${headerBar(W, { code: "ECR//OS", title: "DEVELOPER OPERATING SYSTEM" })}
-<g class="status-boot">${statusLight(W - 300, 27, { label: "BOOTING", color: COLORS.amber })}</g>
-<g class="status-online">${statusLight(W - 300, 27, { label: "ONLINE", color: COLORS.green })}</g>
-<text x="${W - 26}" y="27" class="meta" text-anchor="end">github.com/EricKColl</text>
+<g class="status-boot">${statusLight(W - 108, 27, { label: "BOOTING", color: COLORS.amber })}</g>
+<g class="status-online">${statusLight(W - 108, 27, { label: "ONLINE", color: COLORS.green })}</g>
 
 <g class="rise d0">
   <rect x="${x0}" y="92" width="7" height="7" fill="${COLORS.cyan}"/>
@@ -845,9 +844,8 @@ const ASSETS = {
   "assets/modules/forja.svg": () => moduleCard(FEATURED[1]),
   "assets/modules/module-rack.svg": moduleRack,
   "assets/ui/divider.svg": divider,
-  "assets/ui/cta-portfolio.svg": () => ctaButton({ label: "PORTFOLIO", detail: "erickcoll.github.io", glyph: "portfolio", primary: true }),
+  "assets/ui/cta-portfolio.svg": () => ctaButton({ label: "PORTFOLIO", detail: "erickcoll.github.io/Portfolio-V2", glyph: "portfolio", primary: true }),
   "assets/ui/cta-email.svg": () => ctaButton({ label: "EMAIL", detail: "erickcollrodriguez@gmail.com", glyph: "email" }),
-  "assets/ui/cta-github.svg": () => ctaButton({ label: "GITHUB", detail: "@EricKColl", slug: "github" }),
   "assets/ui/badge-live.svg": () => badge("LIVE", COLORS.green),
   "assets/ui/badge-building.svg": () => badge("BUILDING", COLORS.amber),
 };

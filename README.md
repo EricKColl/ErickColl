@@ -3,9 +3,8 @@
 <img src="assets/hero/system-boot.svg" width="100%" alt="ECR//OS — developer operating system of Erick Coll Rodríguez. Boot sequence, then: Erick Coll Rodríguez, developer node in Girona, Spain. Ambitious DAW student · aspiring Full-Stack Developer · administrative background · applied AI learner · building discipline through technology. Purpose · Discipline · Code. Focus: software development. Path: full-stack development. Interest: applied AI. Mindset: discipline and growth.">
 
 <p>
-  <a href="https://erickcoll.github.io/portfolio-erick-coll/"><img src="assets/ui/cta-portfolio.svg" height="52" alt="Open portfolio — erickcoll.github.io"></a>
+  <a href="https://erickcoll.github.io/Portfolio-V2/"><img src="assets/ui/cta-portfolio.svg" height="52" alt="Open portfolio — erickcoll.github.io/Portfolio-V2"></a>
   <a href="mailto:erickcollrodriguez@gmail.com"><img src="assets/ui/cta-email.svg" height="52" alt="Email — erickcollrodriguez@gmail.com"></a>
-  <a href="https://github.com/EricKColl"><img src="assets/ui/cta-github.svg" height="52" alt="GitHub — @EricKColl"></a>
 </p>
 
 <p><b>Full-Stack Developer in training</b> · DAW student at UOC · Applied AI · Girona, Spain</p>
@@ -150,12 +149,7 @@ Rendered every day by a [GitHub Action](.github/workflows/profile-cards.yml) str
 | Channel | Address |
 |:--|:--|
 | **Email** | [erickcollrodriguez@gmail.com](mailto:erickcollrodriguez@gmail.com) |
-| **Portfolio** | [erickcoll.github.io/portfolio-erick-coll](https://erickcoll.github.io/portfolio-erick-coll/) |
-| **GitHub** | [github.com/EricKColl](https://github.com/EricKColl) |
+| **Portfolio** | [erickcoll.github.io/Portfolio-V2](https://erickcoll.github.io/Portfolio-V2/) |
 | **Location** | Girona, Spain |
 
 <img src="assets/hero/end-of-transmission.svg" width="100%" alt="End of transmission. Discipline builds consistency, consistency builds skill, skill builds value. Building my path through discipline, technology, and continuous growth. Channel open for collaboration.">
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=EricKColl&style=flat-square&color=1d4ed8&label=PROFILE+VIEWS" alt="Profile views">
-</p>
