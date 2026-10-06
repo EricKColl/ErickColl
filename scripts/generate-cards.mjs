@@ -1,114 +1,58 @@
-// Generates the profile SVG cards in assets/cards/ from the GitHub REST API,
-// so the README does not depend on a third-party github-readme-stats instance.
-// Usage: GITHUB_TOKEN=... node scripts/generate-cards.mjs
+// Generates the live telemetry panels in assets/telemetry/ from the GitHub API, in the same
+// design system as the static assets, so the README depends on no third-party stats service.
+// Usage:  GITHUB_TOKEN=... node scripts/generate-cards.mjs
+//         node scripts/generate-cards.mjs --preview   (synthetic data → .preview/, no network)
 
 import { mkdir, writeFile } from "node:fs/promises";
+import { COLORS, FONTS, esc, round, monoWidth, svgDocument, screen, headerBar } from "./lib/theme.mjs";
 
 const USERNAME = "EricKColl";
-const DISPLAY_NAME = "Erick Coll";
-const PINNED_REPOS = [
-  "hotelscout",
-  "LeriFitness",
-  "FullStackAttack-Producto4",
-  "ReparaYa-Producto3-Laravel",
-  "ReparaYa-Producto2",
-  "BugBusters-Producto2",
-];
-// Used only while the repository has no description set on GitHub.
-const DESCRIPTION_FALLBACKS = {
-  hotelscout:
-    "PWA que localiza alojamientos reales cerca de una estación, un aeropuerto o una dirección con datos de OpenStreetMap.",
-  LeriFitness:
-    "Forja: PWA local-first de entrenamiento de gimnasio personalizado, con un motor de planes basado en reglas y datos que no salen del dispositivo.",
-};
 const LANGS_COUNT = 6;
-const OUT_DIR = new URL("../assets/cards/", import.meta.url);
-
-// "tokyonight" palette, the same theme the README used before.
-const THEME = {
-  bg: "#1a1b27",
-  title: "#70a5fd",
-  text: "#38bdae",
-  icon: "#bf91f3",
-  ring: "#bf91f3",
-};
+const RECENT_COUNT = 4;
+const PREVIEW = process.argv.includes("--preview");
+const OUT_DIR = new URL(PREVIEW ? "../.preview/telemetry/" : "../assets/telemetry/", import.meta.url);
 
 const LANGUAGE_COLORS = {
-  Blade: "#f7523f",
-  C: "#555555",
-  "C#": "#178600",
-  "C++": "#f34b7d",
-  CSS: "#663399",
-  Dart: "#00B4AB",
-  Dockerfile: "#384d54",
-  Go: "#00ADD8",
-  Hack: "#878787",
-  HTML: "#e34c26",
-  Java: "#b07219",
-  JavaScript: "#f1e05a",
-  "Jupyter Notebook": "#DA5B0B",
-  Kotlin: "#A97BFF",
-  PHP: "#4F5D95",
-  PowerShell: "#012456",
-  Python: "#3572A5",
-  Ruby: "#701516",
-  Rust: "#dea584",
-  SCSS: "#c6538c",
-  Shell: "#89e051",
-  Swift: "#F05138",
-  TSQL: "#e38c00",
-  TypeScript: "#3178c6",
-  Vue: "#41b883",
+  Blade: "#f7523f", C: "#555555", "C#": "#178600", "C++": "#f34b7d", CSS: "#663399", Dart: "#00B4AB",
+  Dockerfile: "#384d54", Go: "#00ADD8", Hack: "#878787", HTML: "#e34c26", Java: "#b07219", JavaScript: "#f1e05a",
+  "Jupyter Notebook": "#DA5B0B", Kotlin: "#A97BFF", PHP: "#4F5D95", PowerShell: "#012456", Python: "#3572A5",
+  Ruby: "#701516", Rust: "#dea584", SCSS: "#c6538c", Shell: "#89e051", Swift: "#F05138", TSQL: "#e38c00",
+  TypeScript: "#3178c6", Vue: "#41b883",
 };
 
-const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif";
-
-const ICONS = {
-  repo: "M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z",
-  star: "M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z",
-  fork: "M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z",
-  commit: "M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z",
-  pr: "M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z",
-  issue: "M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z",
-  github: "M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z",
+const LEVEL_COLORS = {
+  NONE: COLORS.raised,
+  FIRST_QUARTILE: "#1e3a8a",
+  SECOND_QUARTILE: COLORS.blueDeep,
+  THIRD_QUARTILE: COLORS.blue,
+  FOURTH_QUARTILE: "#7dd3fc",
 };
 
-const escapeXml = (value) =>
-  String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+const fmt = new Intl.NumberFormat("en-US");
 
-const kFormat = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : String(n));
-
-const icon = (path, x, y, size = 16) =>
-  `<svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="0 0 16 16" class="icon"><path fill-rule="evenodd" d="${path}"/></svg>`;
-
-function wrapText(text, maxChars, maxLines) {
-  const lines = [];
-  let current = "";
-  for (const word of text.split(/\s+/).filter(Boolean)) {
-    if (current && `${current} ${word}`.length > maxChars) {
-      lines.push(current);
-      current = word;
-    } else {
-      current = current ? `${current} ${word}` : word;
-    }
-  }
-  if (current) lines.push(current);
-  if (lines.length > maxLines) {
-    lines.length = maxLines;
-    lines[maxLines - 1] = `${lines[maxLines - 1].slice(0, maxChars - 1).trimEnd()}…`;
-  }
-  return lines;
+// Linguist colours are tuned for white backgrounds; lift the darkest ones so they read on the screen.
+function visible(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  const rgb = [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  const lum = (0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]) / 255;
+  if (lum >= 0.3) return hex;
+  const mix = rgb.map((c) => Math.round(c + (255 - c) * 0.4));
+  return `#${mix.map((c) => c.toString(16).padStart(2, "0")).join("")}`;
 }
+
+const shortDate = (iso) => {
+  const d = new Date(iso);
+  return `${String(d.getUTCDate()).padStart(2, "0")} ${MONTHS[d.getUTCMonth()]}`;
+};
+
+// ---------------------------------------------------------------------------------------------
+// Data
 
 function headers() {
   const result = {
     Accept: "application/vnd.github+json",
-    "User-Agent": `${USERNAME}-profile-cards`,
+    "User-Agent": `${USERNAME}-profile-telemetry`,
     "X-GitHub-Api-Version": "2022-11-28",
   };
   if (process.env.GITHUB_TOKEN) result.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -132,130 +76,8 @@ async function graphql(query, variables) {
   return body.data;
 }
 
-function renderPinCard(repo) {
-  const lines = wrapText(repo.description || "No description provided", 52, 3);
-  const descY = 65;
-  const lineHeight = 17;
-  const footerY = descY + (lines.length - 1) * lineHeight + 30;
-  const height = footerY + 20;
-
-  const footer = [];
-  let x = 25;
-  if (repo.language) {
-    const color = LANGUAGE_COLORS[repo.language] || "#858585";
-    footer.push(`<circle cx="${x + 6}" cy="${footerY - 4}" r="6" fill="${color}"/>`);
-    footer.push(`<text x="${x + 18}" y="${footerY}" class="gray">${escapeXml(repo.language)}</text>`);
-    x += 18 + repo.language.length * 6.5 + 20;
-  }
-  footer.push(icon(ICONS.star, x, footerY - 12));
-  footer.push(`<text x="${x + 22}" y="${footerY}" class="gray">${kFormat(repo.stargazers_count)}</text>`);
-  x += 22 + String(kFormat(repo.stargazers_count)).length * 7 + 20;
-  footer.push(icon(ICONS.fork, x, footerY - 12));
-  footer.push(`<text x="${x + 22}" y="${footerY}" class="gray">${kFormat(repo.forks_count)}</text>`);
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="${height}" viewBox="0 0 400 ${height}" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">${escapeXml(repo.name)}</title>
-  <desc id="desc">${escapeXml(repo.description || "")}</desc>
-  <style>
-    .header { font: 600 18px ${FONT}; fill: ${THEME.title}; }
-    .description { font: 400 13px ${FONT}; fill: ${THEME.text}; }
-    .gray { font: 400 12px ${FONT}; fill: ${THEME.text}; }
-    .icon { fill: ${THEME.icon}; }
-  </style>
-  <rect x="0.5" y="0.5" rx="4.5" width="399" height="${height - 1}" fill="${THEME.bg}"/>
-  ${icon(ICONS.repo, 25, 23)}
-  <text x="50" y="37" class="header">${escapeXml(repo.name)}</text>
-  ${lines.map((line, i) => `<text x="25" y="${descY + i * lineHeight}" class="description">${escapeXml(line)}</text>`).join("\n  ")}
-  ${footer.join("\n  ")}
-</svg>
-`;
-}
-
-function renderStatsCard(stats) {
-  const rows = [
-    [ICONS.star, "Total Stars Earned", stats.stars],
-    [ICONS.commit, "Commits (last year)", stats.commits],
-    [ICONS.pr, "Total PRs", stats.prs],
-    [ICONS.issue, "Total Issues", stats.issues],
-    [ICONS.repo, "Contributed to (last year)", stats.contributedTo],
-  ];
-  const width = 467;
-  const height = 195;
-  const radius = 40;
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-labelledby="title">
-  <title id="title">${escapeXml(DISPLAY_NAME)}'s GitHub Stats</title>
-  <style>
-    .header { font: 600 18px ${FONT}; fill: ${THEME.title}; }
-    .stat { font: 600 14px ${FONT}; fill: ${THEME.text}; }
-    .bold { font-weight: 700; }
-    .icon { fill: ${THEME.icon}; }
-  </style>
-  <rect x="0.5" y="0.5" rx="4.5" width="${width - 1}" height="${height - 1}" fill="${THEME.bg}"/>
-  <text x="25" y="35" class="header">${escapeXml(DISPLAY_NAME)}'s GitHub Stats</text>
-  ${rows
-    .map(
-      ([path, label, value], i) => `<g transform="translate(25, ${55 + i * 25})">
-    ${icon(path, 0, 0)}
-    <text x="25" y="12.5" class="stat">${label}:</text>
-    <text x="235" y="12.5" class="stat bold">${kFormat(value)}</text>
-  </g>`,
-    )
-    .join("\n  ")}
-  <g transform="translate(${width - 90}, ${height / 2 + 10})">
-    <circle r="${radius}" stroke="${THEME.ring}" stroke-width="6"/>
-    <svg x="-16" y="-16" width="32" height="32" viewBox="0 0 16 16"><path fill="${THEME.title}" d="${ICONS.github}"/></svg>
-  </g>
-</svg>
-`;
-}
-
-function renderTopLangsCard(langs) {
-  const width = 300;
-  const barWidth = width - 50;
-  const rowsCount = Math.ceil(langs.length / 2);
-  const height = 90 + rowsCount * 25;
-  const total = langs.reduce((sum, lang) => sum + lang.size, 0);
-
-  let offset = 0;
-  const bar = langs
-    .map((lang) => {
-      const w = (lang.size / total) * barWidth;
-      const rect = `<rect x="${offset.toFixed(2)}" y="0" width="${w.toFixed(2)}" height="8" fill="${lang.color}"/>`;
-      offset += w;
-      return rect;
-    })
-    .join("");
-
-  const legend = langs
-    .map((lang, i) => {
-      const x = i % 2 === 0 ? 0 : 150;
-      const y = Math.floor(i / 2) * 25;
-      const pct = ((lang.size / total) * 100).toFixed(2);
-      return `<g transform="translate(${x}, ${y})">
-      <circle cx="5" cy="6" r="5" fill="${lang.color}"/>
-      <text x="15" y="10" class="lang-name">${escapeXml(lang.name)} ${pct}%</text>
-    </g>`;
-    })
-    .join("\n    ");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-labelledby="title">
-  <title id="title">Most Used Languages</title>
-  <style>
-    .header { font: 600 18px ${FONT}; fill: ${THEME.title}; }
-    .lang-name { font: 400 11px ${FONT}; fill: ${THEME.text}; }
-  </style>
-  <rect x="0.5" y="0.5" rx="4.5" width="${width - 1}" height="${height - 1}" fill="${THEME.bg}"/>
-  <text x="25" y="35" class="header">Most Used Languages</text>
-  <mask id="bar-mask"><rect x="0" y="0" width="${barWidth}" height="8" rx="5" fill="white"/></mask>
-  <g transform="translate(25, 55)" mask="url(#bar-mask)">${bar}</g>
-  <g transform="translate(25, 80)">
-    ${legend}
-  </g>
-</svg>
-`;
-}
-
+// Public, non-fork repositories owned by the user (the profile repository itself is excluded
+// from "recent activity" because the bot commits to it every day).
 async function listOwnRepos() {
   const repos = [];
   for (let page = 1; ; page++) {
@@ -263,14 +85,20 @@ async function listOwnRepos() {
     repos.push(...batch);
     if (batch.length < 100) break;
   }
-  return repos.filter((repo) => !repo.fork);
+  return repos.filter((repo) => !repo.fork && !repo.private);
 }
 
-async function buildStats(repos) {
+async function fetchUser() {
   const { user } = await graphql(
     `query($login: String!) {
       user(login: $login) {
-        contributionsCollection { totalCommitContributions }
+        contributionsCollection {
+          totalCommitContributions
+          contributionCalendar {
+            totalContributions
+            weeks { contributionDays { date contributionCount contributionLevel } }
+          }
+        }
         pullRequests { totalCount }
         issues { totalCount }
         repositoriesContributedTo(contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) { totalCount }
@@ -278,61 +106,317 @@ async function buildStats(repos) {
     }`,
     { login: USERNAME },
   );
-  return {
-    stars: repos.reduce((sum, repo) => sum + repo.stargazers_count, 0),
-    commits: user.contributionsCollection.totalCommitContributions,
-    prs: user.pullRequests.totalCount,
-    issues: user.issues.totalCount,
-    contributedTo: user.repositoriesContributedTo.totalCount,
-  };
+  return user;
 }
 
-async function buildTopLangs(repos) {
+async function fetchLanguages(repos) {
   const totals = new Map();
   for (const repo of repos) {
     const langs = await api(`/repos/${repo.full_name}/languages`);
     for (const [name, size] of Object.entries(langs)) totals.set(name, (totals.get(name) || 0) + size);
   }
-  return [...totals]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, LANGS_COUNT)
-    .map(([name, size]) => ({ name, size, color: LANGUAGE_COLORS[name] || "#858585" }));
+  return totals;
 }
 
-// Each card is written only when its data was fetched successfully, so a failed
-// run keeps the previous card instead of publishing an error image.
+function streaks(days) {
+  let longest = 0;
+  let run = 0;
+  for (const day of days) {
+    run = day.contributionCount > 0 ? run + 1 : 0;
+    longest = Math.max(longest, run);
+  }
+  // Today may simply not have contributions yet: the current streak counts from yesterday then.
+  let i = days.length - 1;
+  if (i >= 0 && days[i].contributionCount === 0) i--;
+  let current = 0;
+  while (i >= 0 && days[i].contributionCount > 0) {
+    current++;
+    i--;
+  }
+  const best = days.reduce((top, day) => (day.contributionCount > top.contributionCount ? day : top), days[0]);
+  const active = days.filter((day) => day.contributionCount > 0).length;
+  return { current, longest, best, active };
+}
+
+function buildModel({ user, repos, languages, now }) {
+  const weeks = user.contributionsCollection.contributionCalendar.weeks;
+  const days = weeks.flatMap((week) => week.contributionDays);
+  const total = [...languages.values()].reduce((a, b) => a + b, 0) || 1;
+  const owner = USERNAME.toLowerCase();
+  return {
+    synced: now.toISOString().slice(0, 10),
+    weeks,
+    days,
+    totalContributions: user.contributionsCollection.contributionCalendar.totalContributions,
+    commits: user.contributionsCollection.totalCommitContributions,
+    prs: user.pullRequests.totalCount,
+    issues: user.issues.totalCount,
+    contributedTo: user.repositoriesContributedTo.totalCount,
+    publicRepos: repos.length,
+    stars: repos.reduce((sum, repo) => sum + repo.stargazers_count, 0),
+    streak: streaks(days),
+    languages: [...languages]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, LANGS_COUNT)
+      .map(([name, size]) => ({ name, pct: (size / total) * 100, color: visible(LANGUAGE_COLORS[name] || "#8b9bb4") })),
+    recent: repos
+      .filter((repo) => repo.name.toLowerCase() !== owner)
+      .sort((a, b) => Date.parse(b.pushed_at) - Date.parse(a.pushed_at))
+      .slice(0, RECENT_COUNT)
+      .map((repo) => ({ name: repo.name, language: repo.language, pushed: repo.pushed_at })),
+  };
+}
+
+// Deterministic synthetic data for --preview, so the design can be iterated on without a token.
+function previewModel() {
+  let seed = 7;
+  const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const now = new Date();
+  const start = new Date(now);
+  start.setUTCDate(start.getUTCDate() - 364 - start.getUTCDay());
+  const weeks = [];
+  for (let d = new Date(start); d <= now; d.setUTCDate(d.getUTCDate() + 1)) {
+    if (d.getUTCDay() === 0) weeks.push({ contributionDays: [] });
+    const busy = rand() < 0.62 ? Math.floor(rand() * rand() * 14) : 0;
+    const level = busy === 0 ? "NONE" : busy < 3 ? "FIRST_QUARTILE" : busy < 6 ? "SECOND_QUARTILE" : busy < 9 ? "THIRD_QUARTILE" : "FOURTH_QUARTILE";
+    weeks[weeks.length - 1].contributionDays.push({ date: d.toISOString().slice(0, 10), contributionCount: busy, contributionLevel: level });
+  }
+  const user = {
+    contributionsCollection: {
+      totalCommitContributions: 300,
+      contributionCalendar: { totalContributions: weeks.flatMap((w) => w.contributionDays).reduce((s, d) => s + d.contributionCount, 0), weeks },
+    },
+    pullRequests: { totalCount: 100 },
+    issues: { totalCount: 1 },
+    repositoriesContributedTo: { totalCount: 2 },
+  };
+  const languages = new Map([["HTML", 38], ["PHP", 14], ["TypeScript", 14], ["JavaScript", 13], ["Blade", 11], ["CSS", 9]]);
+  const repos = ["sample-repo-one", "sample-repo-two", "sample-repo-three", "sample-repo-four"].map((name, i) => ({
+    name, language: ["TypeScript", "Java", "PHP", "JavaScript"][i], pushed_at: new Date(Date.now() - i * 3 * 864e5).toISOString(), stargazers_count: 0,
+  }));
+  return buildModel({ user, repos, languages, now });
+}
+
+// ---------------------------------------------------------------------------------------------
+// Rendering
+
+const syncLabel = (model) => (PREVIEW ? "PREVIEW · SYNTHETIC DATA" : `SYNCED ${model.synced} · GITHUB API`);
+
+function renderTelemetry(model) {
+  const W = 1000;
+  const H = 316;
+  const frame = screen(W, H);
+  const tiles = [
+    ["CONTRIBUTIONS", "last 12 months", model.totalContributions, COLORS.cyan],
+    ["COMMITS", "last 12 months", model.commits, COLORS.cyan],
+    ["PULL REQUESTS", "all time", model.prs, COLORS.violet],
+    ["ISSUES", "all time", model.issues, COLORS.violet],
+    ["ACTIVE DAYS", "last 12 months", model.streak.active, COLORS.cyan],
+    ["PUBLIC REPOS", "owned · no forks", model.publicRepos, COLORS.blue],
+    ["STARS EARNED", "own repositories", model.stars, COLORS.blue],
+    ["CONTRIBUTED TO", "repositories · 12m", model.contributedTo, COLORS.green],
+  ];
+  const tileW = 132;
+  const tileH = 104;
+  const gap = 10;
+  const x0 = 30;
+  const y0 = 76;
+  const tileSvg = tiles
+    .map(([label, sub, value, color], i) => {
+      const x = x0 + (i % 4) * (tileW + gap);
+      const y = y0 + Math.floor(i / 4) * (tileH + gap);
+      return `<g class="tile" style="animation-delay:${round(0.1 + i * 0.07, 2)}s">
+        <rect x="${x}" y="${y}" width="${tileW}" height="${tileH}" rx="10" fill="${COLORS.panel}" stroke="${COLORS.line}"/>
+        <path d="M${x + 14} ${y + 0.5}H${x + 46}" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
+        <text x="${x + 14}" y="${y + 26}" class="label" font-size="9.5">${label}</text>
+        <text x="${x + 14}" y="${y + 66}" font-family="${FONTS.sans}" font-size="32" font-weight="700" fill="${COLORS.text}">${fmt.format(value)}</text>
+        <text x="${x + 14}" y="${y + 88}" font-family="${FONTS.mono}" font-size="9.5" fill="${COLORS.dim}">${esc(sub)}</text>
+      </g>`;
+    })
+    .join("");
+
+  const lx = 620;
+  const lw = W - lx - 30;
+  let offset = 0;
+  const totalPct = model.languages.reduce((s, l) => s + l.pct, 0) || 1;
+  const spectrum = model.languages
+    .map((lang) => {
+      const w = (lang.pct / totalPct) * lw;
+      const rect = `<rect x="${round(lx + offset, 2)}" y="96" width="${round(Math.max(w - 2, 1), 2)}" height="10" fill="${lang.color}"/>`;
+      offset += w;
+      return rect;
+    })
+    .join("");
+  const top = Math.max(...model.languages.map((l) => l.pct), 1);
+  const rows = model.languages
+    .map((lang, i) => {
+      const y = 140 + i * 27;
+      const barW = (lang.pct / top) * (lw - 180);
+      return `<g class="tile" style="animation-delay:${round(0.3 + i * 0.07, 2)}s">
+        <circle cx="${lx + 5}" cy="${y - 4}" r="4.5" fill="${lang.color}"/>
+        <text x="${lx + 18}" y="${y}" font-family="${FONTS.mono}" font-size="12" fill="${COLORS.text}">${esc(lang.name)}</text>
+        <rect x="${lx + 128}" y="${y - 8}" width="${round(lw - 180, 2)}" height="6" rx="3" fill="${COLORS.raised}"/>
+        <rect x="${lx + 128}" y="${y - 8}" width="${round(Math.max(barW, 3), 2)}" height="6" rx="3" fill="${lang.color}" class="grow"/>
+        <text x="${W - 30}" y="${y}" text-anchor="end" font-family="${FONTS.mono}" font-size="12" font-weight="700" fill="${COLORS.muted}">${lang.pct.toFixed(1)}%</text>
+      </g>`;
+    })
+    .join("");
+
+  return svgDocument({
+    width: W,
+    height: H,
+    title: "Development telemetry",
+    desc: `${tiles.map(([label, sub, value]) => `${label} (${sub}): ${value}`).join("; ")}. Languages by code volume: ${model.languages.map((l) => `${l.name} ${l.pct.toFixed(1)}%`).join(", ")}. ${syncLabel(model)}.`,
+    defs: `${frame.defs}<clipPath id="spectrum"><rect x="${lx}" y="96" width="${lw}" height="10" rx="5"/></clipPath>`,
+    style: `.tile { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+      .grow { transform-box: fill-box; transform-origin: left; animation: grow 1.2s cubic-bezier(.2,.7,.2,1) .5s both; }
+      @keyframes grow { from { transform: scaleX(0); } }`,
+    body: `${frame.body}
+${headerBar(W, { code: "ECR://TELEMETRY", title: "DEVELOPMENT TELEMETRY", right: syncLabel(model) })}
+${tileSvg}
+<rect x="${lx - 22}" y="76" width="1" height="${2 * tileH + gap}" fill="${COLORS.line}"/>
+<text x="${lx}" y="84" class="label">LANGUAGE SPECTRUM · BY CODE VOLUME</text>
+<g clip-path="url(#spectrum)"><rect x="${lx}" y="96" width="${lw}" height="10" fill="${COLORS.raised}"/>${spectrum}</g>
+${rows}`,
+  });
+}
+
+function renderActivity(model) {
+  const W = 1000;
+  const cell = 10.5;
+  const pitch = 13.5;
+  const gx = 62;
+  const gy = 92;
+  const weeks = model.weeks.slice(-53);
+
+  let months = "";
+  let lastMonth = -1;
+  const columns = weeks
+    .map((week, w) => {
+      const x = gx + w * pitch;
+      const first = week.contributionDays[0];
+      const month = new Date(`${first.date}T00:00:00Z`).getUTCMonth();
+      if (month !== lastMonth && w < weeks.length - 2) {
+        if (lastMonth !== -1 || new Date(`${first.date}T00:00:00Z`).getUTCDate() <= 7) {
+          months += `<text x="${x}" y="${gy - 10}" class="label" font-size="9">${MONTHS[month]}</text>`;
+        }
+        lastMonth = month;
+      }
+      const cells = week.contributionDays
+        .map((day) => {
+          const row = new Date(`${day.date}T00:00:00Z`).getUTCDay();
+          const level = day.contributionLevel || (day.contributionCount ? "SECOND_QUARTILE" : "NONE");
+          const stroke = level === "NONE" ? ` stroke="${COLORS.line}"` : "";
+          return `<rect x="${x}" y="${gy + row * pitch}" width="${cell}" height="${cell}" rx="2.5" fill="${LEVEL_COLORS[level]}"${stroke}/>`;
+        })
+        .join("");
+      return `<g class="col" style="animation-delay:${round(0.2 + w * 0.018, 3)}s">${cells}</g>`;
+    })
+    .join("");
+
+  const days = ["", "MON", "", "WED", "", "FRI", ""]
+    .map((d, i) => (d ? `<text x="30" y="${gy + i * pitch + 10}" class="label" font-size="9">${d}</text>` : ""))
+    .join("");
+
+  const legendX = round(gx + 53 * pitch - 124);
+  const legend = ["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"]
+    .map((lvl, i) => `<rect x="${legendX + 34 + i * 15}" y="${gy + 7 * pitch + 8}" width="10" height="10" rx="2" fill="${LEVEL_COLORS[lvl]}"${lvl === "NONE" ? ` stroke="${COLORS.line}"` : ""}/>`)
+    .join("");
+  const legendSvg = `<text x="${legendX}" y="${gy + 7 * pitch + 17}" class="label" font-size="9">LESS</text>${legend}<text x="${legendX + 34 + 5 * 15 + 4}" y="${gy + 7 * pitch + 17}" class="label" font-size="9">MORE</text>`;
+
+  // Streak column.
+  const sx = gx + 53 * pitch + 26;
+  const { current, longest, best } = model.streak;
+  const stat = (y, label, value, unit, color) => `<g class="tile">
+    <text x="${sx}" y="${y}" class="label" font-size="9.5">${label}</text>
+    <text x="${sx}" y="${y + 30}" font-family="${FONTS.sans}" font-size="28" font-weight="700" fill="${color}">${fmt.format(value)}</text>
+    <text x="${sx + 6 + String(fmt.format(value)).length * 17}" y="${y + 30}" font-family="${FONTS.mono}" font-size="10" fill="${COLORS.dim}">${unit}</text>
+  </g>`;
+  const streakSvg = `<rect x="${sx - 14}" y="${gy - 8}" width="1" height="${7 * pitch + 8}" fill="${COLORS.line}"/>
+    ${stat(gy + 4, "CURRENT STREAK", current, current === 1 ? "day" : "days", COLORS.cyan)}
+    ${stat(gy + 62, "LONGEST STREAK", longest, longest === 1 ? "day" : "days", COLORS.violet)}`;
+
+  // 30-day signal.
+  const last30 = model.days.slice(-30);
+  const sy = gy + 7 * pitch + 66;
+  const sw = 520;
+  const sh = 64;
+  const max = Math.max(...last30.map((d) => d.contributionCount), 1);
+  const pts = last30.map((d, i) => [30 + (i / (last30.length - 1 || 1)) * sw, sy + sh - (d.contributionCount / max) * sh]);
+  const line = pts.map(([x, y], i) => `${i ? "L" : "M"}${round(x)} ${round(y)}`).join("");
+  const area = `${line}L${round(pts[pts.length - 1][0])} ${sy + sh}L30 ${sy + sh}Z`;
+  const signal = `<text x="30" y="${sy - 14}" class="label">SIGNAL · LAST 30 DAYS</text>
+    <text x="${30 + sw}" y="${sy - 14}" text-anchor="end" class="label" font-size="9">PEAK ${max} · BEST DAY ${fmt.format(best.contributionCount)} (${shortDate(best.date)})</text>
+    ${[0, 0.5, 1].map((f) => `<rect x="30" y="${round(sy + sh * f)}" width="${sw}" height="1" fill="${COLORS.line}" opacity=".7"/>`).join("")}
+    <path d="${area}" fill="url(#signal-fill)"/>
+    <path d="${line}" class="trace" pathLength="1" stroke="${COLORS.cyan}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pts.map(([x, y], i) => (last30[i].contributionCount ? `<circle cx="${round(x)}" cy="${round(y)}" r="2.2" fill="${COLORS.ice}"/>` : "")).join("")}`;
+
+  // Latest operations.
+  const ox = 600;
+  const ops = model.recent
+    .map((repo, i) => {
+      const y = sy + 6 + i * 22;
+      const name = repo.name.length > 28 ? `${repo.name.slice(0, 27)}…` : repo.name;
+      const color = visible(LANGUAGE_COLORS[repo.language] || "#8b9bb4");
+      return `<g class="tile" style="animation-delay:${round(0.6 + i * 0.1, 2)}s">
+        <text x="${ox}" y="${y}" font-family="${FONTS.mono}" font-size="11" fill="${COLORS.dim}">${shortDate(repo.pushed)}</text>
+        <text x="${ox + 58}" y="${y}" font-family="${FONTS.mono}" font-size="11.5" font-weight="600" fill="${COLORS.text}">${esc(name)}</text>
+        ${repo.language ? `<circle cx="${W - 30 - monoWidth(repo.language, 10.5) - 10}" cy="${y - 4}" r="3.5" fill="${color}"/><text x="${W - 30}" y="${y}" text-anchor="end" font-family="${FONTS.mono}" font-size="10.5" fill="${COLORS.muted}">${esc(repo.language)}</text>` : ""}
+      </g>`;
+    })
+    .join("");
+  const opsSvg = `<text x="${ox}" y="${sy - 14}" class="label">LATEST PUSHES · PUBLIC REPOS</text>${ops}`;
+
+  const H = sy + sh + 32;
+  const frame = screen(W, H);
+  return svgDocument({
+    width: W,
+    height: H,
+    title: "Contribution matrix and recent activity",
+    desc: `${fmt.format(model.totalContributions)} contributions in the last 12 months. Current streak ${current} days, longest ${longest} days, best day ${best.contributionCount} contributions on ${best.date}. Latest pushes: ${model.recent.map((r) => `${r.name} (${r.pushed.slice(0, 10)})`).join(", ")}. ${syncLabel(model)}.`,
+    defs: `${frame.defs}<linearGradient id="signal-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${COLORS.cyan}" stop-opacity=".35"/><stop offset="1" stop-color="${COLORS.cyan}" stop-opacity="0"/></linearGradient>`,
+    style: `.col { animation: fade-in .5s ease both; }
+      .tile { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+      .trace { stroke-dasharray: 1; animation: trace 2.2s cubic-bezier(.4,0,.2,1) .4s both; }
+      @keyframes trace { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }`,
+    body: `${frame.body}
+${headerBar(W, { code: "ECR://ACTIVITY", title: "CONTRIBUTION MATRIX", right: `${fmt.format(model.totalContributions)} CONTRIBUTIONS · LAST 12 MONTHS` })}
+${months}${days}${columns}${legendSvg}
+${streakSvg}
+<rect x="30" y="${sy - 40}" width="${W - 60}" height="1" fill="${COLORS.line}"/>
+${signal}
+<rect x="${ox - 22}" y="${sy - 26}" width="1" height="${sh + 26}" fill="${COLORS.line}"/>
+${opsSvg}`,
+  });
+}
+
+// ---------------------------------------------------------------------------------------------
+
+// Each panel is written only when its data was fetched successfully, so a failed run keeps the
+// previous panel instead of publishing an error image.
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
-  const failures = [];
-  const write = (file, svg) => writeFile(new URL(file, OUT_DIR), svg).then(() => console.log(`wrote assets/cards/${file}`));
-  const attempt = async (label, fn) => {
-    try {
-      await fn();
-    } catch (error) {
-      failures.push(label);
-      console.error(`::warning::${label} not updated: ${error.message}`);
-    }
+  const write = async (file, svg) => {
+    await writeFile(new URL(file, OUT_DIR), svg);
+    console.log(`wrote ${PREVIEW ? ".preview" : "assets"}/telemetry/${file}`);
   };
 
-  for (const name of PINNED_REPOS) {
-    await attempt(`pin ${name}`, async () => {
-      const repo = await api(`/repos/${USERNAME}/${name}`);
-      repo.description ||= DESCRIPTION_FALLBACKS[name];
-      await write(`${name}.svg`, renderPinCard(repo));
-    });
+  if (PREVIEW) {
+    const model = previewModel();
+    await write("telemetry.svg", renderTelemetry(model));
+    await write("activity.svg", renderActivity(model));
+    return;
   }
 
-  let repos;
-  await attempt("repository list", async () => {
-    repos = await listOwnRepos();
-  });
-  if (repos) {
-    await attempt("stats card", async () => write("stats.svg", renderStatsCard(await buildStats(repos))));
-    await attempt("top languages card", async () => write("top-langs.svg", renderTopLangsCard(await buildTopLangs(repos))));
-  }
-
-  if (failures.length) {
-    console.error(`Failed: ${failures.join(", ")}`);
+  try {
+    const [user, repos] = await Promise.all([fetchUser(), listOwnRepos()]);
+    const languages = await fetchLanguages(repos);
+    const model = buildModel({ user, repos, languages, now: new Date() });
+    await write("telemetry.svg", renderTelemetry(model));
+    await write("activity.svg", renderActivity(model));
+  } catch (error) {
+    console.error(`::warning::telemetry not updated: ${error.message}`);
     process.exitCode = 1;
   }
 }

@@ -1,5 +1,7 @@
-name: Update profile cards
+name: Update profile telemetry
 
+# Regenerates assets/telemetry/*.svg (stats, languages, contribution matrix, latest pushes)
+# from the GitHub API once a day. Only commits when the rendered panels actually changed.
 on:
   schedule:
     - cron: "30 4 * * *"
@@ -7,40 +9,44 @@ on:
   push:
     paths:
       - "scripts/generate-cards.mjs"
+      - "scripts/lib/**"
       - ".github/workflows/profile-cards.yml"
 
-permissions:
-  contents: write
+permissions: {}
 
 concurrency:
-  group: profile-cards-${{ github.ref }}
+  group: profile-telemetry-${{ github.ref }}
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
 
-      - name: Generate cards
+      # Dependency-free script: no `npm ci`, nothing third-party runs with the token.
+      - name: Generate telemetry panels
         run: node scripts/generate-cards.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Runs even if some card failed, so the ones that succeeded are still published.
-      - name: Commit updated cards
+      # Runs even if generation failed, so a previous good panel is never replaced by an error.
+      - name: Commit updated panels
         if: ${{ !cancelled() }}
         run: |
-          git add assets/cards
+          git add assets/telemetry
           if git diff --cached --quiet; then
-            echo "Cards are up to date."
+            echo "Telemetry is up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update profile cards"
+          git commit -m "chore: update profile telemetry"
           git pull --rebase
           git push
