@@ -1,92 +1,157 @@
 // Single source of truth for the static profile assets. Edit here, then run `npm run build:assets`.
-// Every fact below comes from this README, the linked repositories or the published portfolio.
+// Every fact below comes from this README, the linked repositories, the published portfolio or the CV.
 
 export const PROFILE = {
   name: ["ERICK COLL", "RODRÍGUEZ"],
-  node: "DEVELOPER NODE · GIRONA, ES",
+  node: "DEVELOPER NODE · GIRONA, CATALUNYA",
+  status: "OPEN TO INTERNSHIP",
   motto: "PURPOSE · DISCIPLINE · CODE",
   roles: [
-    "Ambitious DAW Student",
-    "Aspiring Full-Stack Developer",
-    "Administrative Background",
-    "Applied AI Learner",
+    "Full-stack developer in training",
+    "DAW student · last semester · UOC",
+    "Open to a DAW internship",
+    "2 PWAs live in production",
     "Building discipline through technology",
   ],
   readouts: [
-    ["FOCUS", "Software development"],
-    ["PATH", "Full-stack development"],
+    ["FOCUS", "Full-stack development"],
     ["INTEREST", "Applied AI"],
-    ["MINDSET", "Discipline & growth"],
+    ["LANGUAGES", "Catalan · Spanish · English B1"],
+    ["METHOD", "Build · Test · Evolve"],
   ],
   ticker: [
-    ["EDUCATION", "DAW · UOC", "cyan"],
-    ["BACKGROUND", "7+ YRS ADMIN", "violet"],
-    ["APPLIED AI", "2 YRS EXPLORING", "violet"],
+    ["EDUCATION", "DAW · LAST SEMESTER", "cyan"],
+    ["GRADE AVERAGE", "9.29 / 10", "cyan"],
+    ["EXPERIENCE", "7+ YRS · 4 COMPANIES", "violet"],
     ["PRODUCTS", "2 LIVE PWAs", "green"],
-    ["METHOD", "BUILD · TEST · EVOLVE", "cyan"],
+    ["APPLIED AI", "2 YRS EXPLORING", "violet"],
+  ],
+  boot: [
+    ["mounting identity", "erick coll rodríguez"],
+    ["loading stack", "java · ts · php · sql"],
+    ["linking project modules", "2 live · 3 team"],
+    ["status", "open to internship"],
   ],
   philosophy: ["DISCIPLINE", "CONSISTENCY", "SKILL", "VALUE"],
 };
 
-// Tier "live" = shipped in a production app (HotelScout / Forja). Everything else is in use or being learned.
+// How each technology's mark is drawn:
+//   dev  → the original full-colour logo from Devicon (MIT)
+//   si   → the Simple Icons mark (CC0) in its brand colour, lifted when too dark for the screen
+//   mono → a monogram tile in the brand colour, for marks that are not available or not permitted
+export const ICONS = {
+  Java: { dev: "java/java-original" },
+  JavaScript: { dev: "javascript/javascript-original" },
+  TypeScript: { dev: "typescript/typescript-original" },
+  PHP: { si: "php" },
+  Python: { dev: "python/python-original" },
+  C: { dev: "c/c-original" },
+  "C++": { dev: "cplusplus/cplusplus-original" },
+  SQL: { mono: "SQL", color: "#4FA7C7" },
+  HTML5: { dev: "html5/html5-original" },
+  CSS3: { dev: "css3/css3-original" },
+  React: { dev: "react/react-original" },
+  Angular: { dev: "angular/angular-original" },
+  Bootstrap: { dev: "bootstrap/bootstrap-original" },
+  "Tailwind CSS": { dev: "tailwindcss/tailwindcss-original" },
+  Vite: { dev: "vitejs/vitejs-original" },
+  "Three.js": { si: "threedotjs" },
+  Leaflet: { si: "leaflet" },
+  PWA: { si: "pwa" },
+  JavaFX: { mono: "FX", color: "#ED8B00" },
+  "Node.js": { dev: "nodejs/nodejs-original" },
+  Express: { si: "express" },
+  GraphQL: { dev: "graphql/graphql-plain" },
+  Apollo: { si: "apollographql" },
+  "Socket.io": { si: "socketdotio" },
+  Laravel: { dev: "laravel/laravel-original" },
+  "Spring Boot": { dev: "spring/spring-original" },
+  WordPress: { si: "wordpress" },
+  MySQL: { si: "mysql" },
+  MongoDB: { dev: "mongodb/mongodb-original" },
+  Mongoose: { si: "mongoose" },
+  Supabase: { dev: "supabase/supabase-original" },
+  IndexedDB: { mono: "IDB", color: "#38BDF8" },
+  Zod: { si: "zod" },
+  Hibernate: { dev: "hibernate/hibernate-original" },
+  JDBC: { mono: "DB", color: "#F89820" },
+  Git: { dev: "git/git-original" },
+  GitHub: { si: "github" },
+  "GitHub Actions": { dev: "githubactions/githubactions-original" },
+  Docker: { dev: "docker/docker-original" },
+  "Cloudflare Pages": { si: "cloudflarepages" },
+  Vitest: { dev: "vitest/vitest-original" },
+  Playwright: { dev: "playwright/playwright-original" },
+  JUnit: { dev: "junit/junit-original" },
+  Postman: { dev: "postman/postman-original" },
+  Maven: { si: "apachemaven" },
+  "TanStack Query": { si: "reactquery" },
+  "VS Code": { dev: "vscode/vscode-original" },
+  "Visual Studio": { dev: "visualstudio/visualstudio-original" },
+  "IntelliJ IDEA": { dev: "intellij/intellij-original" },
+  VirtualBox: { si: "virtualbox" },
+  "Hyper-V": { mono: "HV", color: "#00A4EF" },
+  Windows: { dev: "windows11/windows11-original" },
+  Linux: { si: "linux" },
+  Claude: { si: "claude" },
+  ChatGPT: { mono: "GPT", color: "#74AA9C" },
+  Codex: { mono: "CX", color: "#E8EEF9" },
+  Gemini: { si: "googlegemini" },
+  DeepSeek: { si: "deepseek" },
+  Copilot: { si: "githubcopilot" },
+  "Suno AI": { mono: "SU", color: "#E8EEF9" },
+  "AI agents": { mono: "AG", color: "#22C55E" },
+};
+
+// Stack items: [label, icon key (defaults to the label), tier]. Tier "live" = shipped in a production
+// app (HotelScout / Forja); everything else is in use or being learned.
 export const STACK = [
   {
     layer: "LANGUAGES",
     caption: "core syntax",
-    items: [
-      ["Java", "openjdk"], ["JavaScript", "javascript"], ["TypeScript", "typescript", "live"], ["PHP", "php"],
-      ["Python", "python"], ["C", "c"], ["C++", "cplusplus"], ["SQL", null, null, "SQL"],
-    ],
+    items: [["Java"], ["JavaScript"], ["TypeScript", null, "live"], ["PHP"], ["Python"], ["C"], ["C++"], ["SQL"]],
   },
   {
     layer: "INTERFACE LAYER",
     caption: "frontend",
     items: [
-      ["HTML5", "html5"], ["CSS3", "css"], ["React", "react", "live"], ["Angular", "angular"],
-      ["Bootstrap", "bootstrap"], ["Tailwind CSS", "tailwindcss", "live"], ["Vite", "vite", "live"],
-      ["Three.js", "threedotjs", "live"], ["Leaflet", "leaflet", "live"], ["PWA", "pwa", "live"], ["JavaFX", null, null, "FX"],
+      ["HTML5"], ["CSS3"], ["React", null, "live"], ["Angular"], ["Bootstrap"], ["Tailwind CSS", null, "live"],
+      ["Vite", null, "live"], ["Three.js", null, "live"], ["Leaflet", null, "live"], ["PWA", null, "live"], ["JavaFX"],
     ],
   },
   {
     layer: "LOGIC ENGINE",
     caption: "backend",
-    items: [
-      ["Node.js", "nodedotjs"], ["Express", "express"], ["GraphQL", "graphql"], ["Apollo", "apollographql"],
-      ["Socket.io", "socketdotio"], ["Laravel", "laravel"], ["Spring Boot", "springboot"], ["WordPress", "wordpress"],
-    ],
+    items: [["Node.js"], ["Express"], ["GraphQL"], ["Apollo"], ["Socket.io"], ["Laravel"], ["Spring Boot"], ["WordPress"]],
   },
   {
     layer: "DATA MEMORY",
     caption: "persistence",
     items: [
-      ["MySQL", "mysql"], ["MongoDB", "mongodb"], ["Mongoose", "mongoose"], ["Supabase", "supabase", "live"],
-      ["IndexedDB · Dexie", null, "live", "IDB"], ["Zod", "zod", "live"], ["JPA · Hibernate", "hibernate"], ["JDBC", null, null, "DB"],
+      ["MySQL"], ["MongoDB"], ["Mongoose"], ["Supabase", null, "live"], ["IndexedDB · Dexie", "IndexedDB", "live"],
+      ["Zod", null, "live"], ["JPA · Hibernate", "Hibernate"], ["JDBC"],
     ],
   },
   {
     layer: "DELIVERY PIPELINE",
     caption: "ship & verify",
     items: [
-      ["Git", "git"], ["GitHub", "github"], ["GitHub Actions", "githubactions", "live"], ["Docker", "docker"],
-      ["Cloudflare Pages", "cloudflarepages", "live"], ["Vitest", "vitest", "live"], ["Playwright", null, "live", "PW"],
-      ["JUnit", "junit5"], ["Postman", "postman"], ["Maven", "apachemaven"],
+      ["Git"], ["GitHub"], ["GitHub Actions", null, "live"], ["Docker"], ["Cloudflare Pages", null, "live"],
+      ["Vitest", null, "live"], ["Playwright", null, "live"], ["JUnit"], ["Postman"], ["Maven"],
     ],
   },
   {
     layer: "WORKSTATION",
     caption: "environments",
     items: [
-      ["VS Code", null, null, "VS"], ["Visual Studio 2022", null, null, "VS"], ["IntelliJ IDEA", "intellijidea"],
-      ["VirtualBox", "virtualbox"], ["Hyper-V", null, null, "HV"], ["Windows", null, null, "WIN"], ["Linux", "linux"],
+      ["VS Code"], ["Visual Studio 2022", "Visual Studio"], ["IntelliJ IDEA"], ["VirtualBox"], ["Hyper-V"], ["Windows"], ["Linux"],
     ],
   },
   {
     layer: "AI MODULE",
     caption: "applied ai",
     items: [
-      ["Claude · Claude Code", "claude"], ["ChatGPT", null, null, "GPT"], ["Codex", null, null, "CX"],
-      ["Gemini", "googlegemini"], ["DeepSeek", "deepseek"], ["Copilot", "githubcopilot"], ["Suno AI", null, null, "SU"],
-      ["AI agents", null, null, "AG"],
+      ["Claude · Claude Code", "Claude"], ["ChatGPT"], ["Codex"], ["Gemini"], ["DeepSeek"], ["Copilot"], ["Suno AI"], ["AI agents"],
     ],
   },
 ];
@@ -116,9 +181,8 @@ export const FEATURED = [
     metricsTitle: "QUALITY GATES",
     metrics: [["85", "unit + integration"], ["21", "end-to-end"], ["0", "axe violations"], ["0", "npm audit"]],
     stack: [
-      ["React 19", "react"], ["TypeScript", "typescript"], ["Vite", "vite"], ["Tailwind CSS 4", "tailwindcss"],
-      ["Leaflet", "leaflet"], ["TanStack Query", "reactquery"], ["Zod", "zod"], ["Vitest", "vitest"],
-      ["Cloudflare Pages", "cloudflarepages"],
+      ["React 19", "React"], ["TypeScript"], ["Vite"], ["Tailwind CSS 4", "Tailwind CSS"], ["Leaflet"],
+      ["TanStack Query"], ["Zod"], ["Vitest"], ["Playwright"], ["Cloudflare Pages"],
     ],
   },
   {
@@ -145,18 +209,18 @@ export const FEATURED = [
       "Full offline PWA (Workbox), installable from the browser",
       "Interactive 3D anatomy model, loaded on demand",
       "Passwordless optional cloud sync between devices",
-      "CI/CD to Cloudflare Pages with GitHub Actions",
+      "CI + CD to Cloudflare Pages, smoke-tested in production",
     ],
     metricsTitle: "DESIGN PRINCIPLES",
-    metrics: [["0", "AI-decided plans"], ["100%", "works offline"], ["TS", "strict mode"], ["EU", "cloud region"]],
+    metrics: [["RULES", "no AI picks the plan"], ["LOCAL", "health data on device"], ["OFFLINE", "installable PWA"], ["SMOKE", "prod checks per deploy"]],
     stack: [
-      ["React 19", "react"], ["TypeScript", "typescript"], ["Vite", "vite"], ["Tailwind CSS 4", "tailwindcss"],
-      ["Three.js", "threedotjs"], ["Dexie", null], ["Supabase", "supabase"], ["Vitest", "vitest"], ["PWA", "pwa"],
+      ["React 19", "React"], ["TypeScript"], ["Vite"], ["Tailwind CSS 4", "Tailwind CSS"], ["Three.js"],
+      ["Dexie", "IndexedDB"], ["Supabase"], ["Vitest"], ["PWA"],
     ],
   },
 ];
 
-// Secondary modules: team and academic systems at UOC, shown as one rack.
+// Team product lines at UOC, each shown at its most complete iteration.
 export const RACK = [
   {
     index: "03",
@@ -164,53 +228,36 @@ export const RACK = [
     repo: "FullStackAttack · Producto 4",
     kind: "Full-stack JavaScript job platform",
     context: "TEAM OF 3 · UOC FP.450",
-    chain: ["HTML · Bootstrap · JS", "Fetch", "GraphQL · Apollo", "Mongoose", "MongoDB"],
-    note: "Express server · auth & roles · Socket.io real time",
+    icons: ["JavaScript", "Node.js", "GraphQL", "MongoDB", "Socket.io"],
+    chain: ["Bootstrap UI", "Fetch", "Express · Apollo", "Mongoose", "MongoDB"],
+    note: "JWT auth & roles · Socket.io real time · GraphQL API",
   },
   {
     index: "04",
-    name: "REPARAYA · LARAVEL",
-    repo: "ReparaYa · Producto 3",
-    kind: "Repair management migrated to Laravel",
+    name: "REPARAYA",
+    repo: "ReparaYa · Producto 2 → 4",
+    kind: "Repair management, rebuilt three times",
     context: "TEAM OF 3 · UOC FP.448",
-    chain: ["Blade views", "Laravel 12 MVC", "Eloquent ORM", "MySQL 8"],
-    note: "REST JSON API · B2B module · Docker · deployed to a UOC server",
+    icons: ["PHP", "Laravel", "WordPress", "MySQL", "Docker"],
+    chain: ["P2 · PHP MVC", "P3 · Laravel 12", "P4 · WordPress", "MySQL 8"],
+    note: "roles · calendar · REST JSON API · deployed to a UOC server",
   },
   {
     index: "05",
-    name: "REPARAYA · PHP",
-    repo: "ReparaYa · Producto 2",
-    kind: "Framework-less PHP repair management",
-    context: "UOC FP.448",
-    chain: ["public entry", "PHP MVC core", "PDO", "MySQL 8"],
-    note: "Apache · phpMyAdmin · Docker Compose environment",
-  },
-  {
-    index: "06",
-    name: "BUGBUSTERS",
-    repo: "BugBusters · Producto 2",
-    kind: "Collaborative Java online-store logic",
-    context: "TEAM PROJECT · UOC",
-    chain: ["console view", "controller", "model · generics", "in-memory data"],
-    note: "MVC · OOP business rules · exceptions · JUnit tests",
+    name: "ONLINE STORE",
+    repo: "BugBusters · Producto 5",
+    kind: "Java desktop store management",
+    context: "TEAM OF 4 · UOC FP.447",
+    icons: ["Java", "Hibernate", "MySQL", "Maven", "JUnit"],
+    chain: ["JavaFX · FXML", "controllers", "JPA · Hibernate", "MySQL"],
+    note: "KPI dashboard · Maven · grew from a console app with JUnit tests",
   },
 ];
 
 export const TRAJECTORY = [
-  { index: "01", title: "ADMINISTRATION", lines: ["7+ yrs structure,", "responsibility, detail"], color: "violet" },
-  { index: "02", title: "DAW · UOC", lines: ["Web Application", "Development"], color: "cyan" },
+  { index: "01", title: "OPERATIONS", lines: ["7+ yrs · 4 companies", "admin · ops · customers"], color: "violet" },
+  { index: "02", title: "DAW · UOC", lines: ["last semester", "grade average 9.29 / 10"], color: "cyan" },
   { index: "03", title: "FULL-STACK", lines: ["backend · frontend", "devops"], color: "blue", lane: 0 },
   { index: "03", title: "APPLIED AI", lines: ["agents · automation", "prompt design"], color: "violet", lane: 1 },
   { index: "04", title: "GOAL", lines: ["practical, scalable,", "well-structured solutions"], color: "green" },
-];
-
-// The identity shell doubles as the "core profile" manifest of the original README.
-export const TERMINAL = [
-  { cmd: "whoami", out: [["Erick Coll Rodríguez", "text"], ["  ·  full-stack developer in training  ·  Girona, ES", "muted"]] },
-  { cmd: "profile --path", out: [["Web Application Development (DAW)", "text"], ["  ·  UOC", "cyan"]] },
-  { cmd: "profile --direction", out: [["Full-stack development", "text"], ["  ·  backend · frontend · devops", "muted"]] },
-  { cmd: "profile --focus", out: [["Applied AI", "violet"], ["  ·  AI agents · productivity workflows · prompt design", "muted"]] },
-  { cmd: "profile --background", out: [["Administration & structured professional work", "text"], ["  ·  7+ yrs", "violet"]] },
-  { cmd: "profile --goal", out: [["Build useful, scalable and well-designed digital solutions", "text"]] },
-  { cmd: "projects --live", out: [["hotelscout.pages.dev", "cyan"], ["  [LIVE]", "green"], ["    forja-13u.pages.dev", "cyan"], ["  [LIVE]", "green"]] },
 ];
