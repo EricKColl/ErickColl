@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="316" viewBox="0 0 1000 316" fill="none" role="img" aria-labelledby="title desc">
 <title id="title">Development telemetry</title>
-<desc id="desc">CONTRIBUTIONS (last 12 months): 480; COMMITS (last 12 months): 338; PULL REQUESTS (all time): 110; ISSUES (all time): 1; ACTIVE DAYS (last 12 months): 74; PUBLIC REPOS (owned · no forks): 21; STARS EARNED (own repositories): 2; CONTRIBUTED TO (repositories · 12m): 2. Languages by code volume: HTML 36.4%, JavaScript 13.6%, PHP 13.6%, TypeScript 13.5%, Blade 10.1%, CSS 8.5%. SYNCED 2026-10-06 · GITHUB API.</desc>
+<desc id="desc">CONTRIBUTIONS (last 12 months): 483; COMMITS (last 12 months): 340; PULL REQUESTS (all time): 111; PUBLIC REPOS (owned · no forks): 21. Languages across all public repositories, including coursework: HTML 36.4%, JavaScript 13.6%, PHP 13.6%, TypeScript 13.5%, Blade 10.1%, CSS 8.5%. Latest pushes: FP.451-Producto1 (2026-10-06), FP.449-Producto1 (2026-10-01), LeriFitness (2026-09-28), Portfolio-V2 (2026-09-26). SYNCED 2026-10-06 · GITHUB API.</desc>
 <style>.mono { font-family: 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; } .sans { font-family: Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; } .code { font: 600 11.5px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 2px; fill: #38bdf8; } .title { font: 500 11.5px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 2.5px; fill: #e8eef9; } .meta { font: 500 11px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 1.2px; fill: #6b7fa6; } .label { font: 600 10px 'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace; letter-spacing: 1.8px; fill: #6b7fa6; } .body { font: 400 15px Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; fill: #a3b3cf; } .strong { font: 600 15px Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif; fill: #e8eef9; } @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } } @keyframes breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } } @keyframes spin { to { transform: rotate(360deg); } } @keyframes spin-reverse { to { transform: rotate(-360deg); } } @keyframes fade-in { from { opacity: 0; } } @keyframes rise { from { opacity: 0; transform: translateY(8px); } } @keyframes flow { to { stroke-dashoffset: -40; } } .pulse { animation: pulse 2.4s ease-in-out infinite; } .breathe { animation: breathe 4s ease-in-out infinite; } .flow { stroke-dasharray: 4 16; animation: flow 1.6s linear infinite; } .tile { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; } .grow { transform-box: fill-box; transform-origin: left; animation: grow 1.2s cubic-bezier(.2,.7,.2,1) .5s both; } @keyframes grow { from { transform: scaleX(0); } } @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }</style>
 <defs>
 <linearGradient id="screen-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070d1c"/><stop offset="1" stop-color="#04070f"/></linearGradient>
@@ -9,7 +9,7 @@
 <radialGradient id="screen-fade" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="screen-vignette"><rect width="1000" height="316" fill="url(#screen-fade)"/></mask>
 <radialGradient id="screen-aura" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1d4ed8" stop-opacity=".28"/><stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/></radialGradient>
-<clipPath id="screen-clip"><rect x="1" y="1" width="998" height="314" rx="16"/></clipPath><clipPath id="spectrum"><rect x="620" y="96" width="350" height="10" rx="5"/></clipPath></defs>
+<clipPath id="screen-clip"><rect x="1" y="1" width="998" height="314" rx="16"/></clipPath><clipPath id="spectrum"><rect x="352" y="96" width="290" height="10" rx="5"/></clipPath></defs>
 
 <rect x=".5" y=".5" width="999" height="315" rx="16" fill="url(#screen-bg)"/>
 <g clip-path="url(#screen-clip)">
@@ -30,92 +30,88 @@
 <text x="974" y="27" class="meta" text-anchor="end">SYNCED 2026-10-06 · GITHUB API</text>
 <rect x="1" y="46" width="998" height="1" fill="url(#hairline)"/>
 <g class="tile" style="animation-delay:0.1s">
-        <rect x="30" y="76" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
+        <rect x="30" y="76" width="140" height="100" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
         <path d="M44 76.5H76" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-        <text x="44" y="102" class="label" font-size="9.5">CONTRIBUTIONS</text>
-        <text x="44" y="142" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">480</text>
-        <text x="44" y="164" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">last 12 months</text>
-      </g><g class="tile" style="animation-delay:0.17s">
-        <rect x="172" y="76" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M186 76.5H218" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-        <text x="186" y="102" class="label" font-size="9.5">COMMITS</text>
-        <text x="186" y="142" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">338</text>
-        <text x="186" y="164" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">last 12 months</text>
-      </g><g class="tile" style="animation-delay:0.24s">
-        <rect x="314" y="76" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M328 76.5H360" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
-        <text x="328" y="102" class="label" font-size="9.5">PULL REQUESTS</text>
-        <text x="328" y="142" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">110</text>
-        <text x="328" y="164" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">all time</text>
-      </g><g class="tile" style="animation-delay:0.31s">
-        <rect x="456" y="76" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M470 76.5H502" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
-        <text x="470" y="102" class="label" font-size="9.5">ISSUES</text>
-        <text x="470" y="142" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">1</text>
-        <text x="470" y="164" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">all time</text>
-      </g><g class="tile" style="animation-delay:0.38s">
-        <rect x="30" y="190" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M44 190.5H76" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-        <text x="44" y="216" class="label" font-size="9.5">ACTIVE DAYS</text>
-        <text x="44" y="256" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">74</text>
-        <text x="44" y="278" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">last 12 months</text>
-      </g><g class="tile" style="animation-delay:0.45s">
-        <rect x="172" y="190" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M186 190.5H218" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-        <text x="186" y="216" class="label" font-size="9.5">PUBLIC REPOS</text>
-        <text x="186" y="256" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">21</text>
-        <text x="186" y="278" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">owned · no forks</text>
-      </g><g class="tile" style="animation-delay:0.52s">
-        <rect x="314" y="190" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M328 190.5H360" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-        <text x="328" y="216" class="label" font-size="9.5">STARS EARNED</text>
-        <text x="328" y="256" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">2</text>
-        <text x="328" y="278" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">own repositories</text>
-      </g><g class="tile" style="animation-delay:0.59s">
-        <rect x="456" y="190" width="132" height="104" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
-        <path d="M470 190.5H502" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-        <text x="470" y="216" class="label" font-size="9.5">CONTRIBUTED TO</text>
-        <text x="470" y="256" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">2</text>
-        <text x="470" y="278" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">repositories · 12m</text>
+        <text x="44" y="101" class="label" font-size="9.5">CONTRIBUTIONS</text>
+        <text x="44" y="140" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">483</text>
+        <text x="44" y="161" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">last 12 months</text>
+      </g><g class="tile" style="animation-delay:0.18s">
+        <rect x="180" y="76" width="140" height="100" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
+        <path d="M194 76.5H226" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+        <text x="194" y="101" class="label" font-size="9.5">COMMITS</text>
+        <text x="194" y="140" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">340</text>
+        <text x="194" y="161" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">last 12 months</text>
+      </g><g class="tile" style="animation-delay:0.26s">
+        <rect x="30" y="186" width="140" height="100" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
+        <path d="M44 186.5H76" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+        <text x="44" y="211" class="label" font-size="9.5">PULL REQUESTS</text>
+        <text x="44" y="250" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">111</text>
+        <text x="44" y="271" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">all time</text>
+      </g><g class="tile" style="animation-delay:0.34s">
+        <rect x="180" y="186" width="140" height="100" rx="10" fill="#0a1224" stroke="#1c2b4d"/>
+        <path d="M194 186.5H226" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+        <text x="194" y="211" class="label" font-size="9.5">PUBLIC REPOS</text>
+        <text x="194" y="250" font-family="Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eef9">21</text>
+        <text x="194" y="271" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">owned · no forks</text>
       </g>
-<rect x="598" y="76" width="1" height="218" fill="#1c2b4d"/>
-<text x="620" y="84" class="label">LANGUAGE SPECTRUM · BY CODE VOLUME</text>
-<g clip-path="url(#spectrum)"><rect x="620" y="96" width="350" height="10" fill="#0f1a33"/><rect x="620" y="96" width="131.29" height="10" fill="#e34c26"/><rect x="753.29" y="96" width="47.88" height="10" fill="#f1e05a"/><rect x="803.17" y="96" width="47.69" height="10" fill="#4F5D95"/><rect x="852.86" y="96" width="47.31" height="10" fill="#3178c6"/><rect x="902.17" y="96" width="34.85" height="10" fill="#f7523f"/><rect x="939.02" y="96" width="28.98" height="10" fill="#a385c2"/></g>
+<rect x="330" y="76" width="1" height="210" fill="#1c2b4d"/>
+<text x="352" y="84" class="label">LANGUAGES · ALL PUBLIC REPOS</text>
+<g clip-path="url(#spectrum)"><rect x="352" y="96" width="290" height="10" fill="#0f1a33"/><rect x="352" y="96" width="108.44" height="10" fill="#e34c26"/><rect x="462.44" y="96" width="39.32" height="10" fill="#f1e05a"/><rect x="503.76" y="96" width="39.18" height="10" fill="#4F5D95"/><rect x="544.94" y="96" width="38.85" height="10" fill="#3178c6"/><rect x="585.79" y="96" width="28.54" height="10" fill="#f7523f"/><rect x="616.33" y="96" width="23.67" height="10" fill="#a385c2"/></g>
 <g class="tile" style="animation-delay:0.3s">
-        <circle cx="625" cy="136" r="4.5" fill="#e34c26"/>
-        <text x="638" y="140" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">HTML</text>
-        <rect x="748" y="132" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="132" width="170" height="6" rx="3" fill="#e34c26" class="grow"/>
-        <text x="970" y="140" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">36.4%</text>
-      </g><g class="tile" style="animation-delay:0.37s">
-        <circle cx="625" cy="163" r="4.5" fill="#f1e05a"/>
-        <text x="638" y="167" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">JavaScript</text>
-        <rect x="748" y="159" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="159" width="63.62" height="6" rx="3" fill="#f1e05a" class="grow"/>
-        <text x="970" y="167" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">13.6%</text>
-      </g><g class="tile" style="animation-delay:0.44s">
-        <circle cx="625" cy="190" r="4.5" fill="#4F5D95"/>
-        <text x="638" y="194" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">PHP</text>
-        <rect x="748" y="186" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="186" width="63.38" height="6" rx="3" fill="#4F5D95" class="grow"/>
-        <text x="970" y="194" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">13.6%</text>
-      </g><g class="tile" style="animation-delay:0.51s">
-        <circle cx="625" cy="217" r="4.5" fill="#3178c6"/>
-        <text x="638" y="221" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">TypeScript</text>
-        <rect x="748" y="213" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="213" width="62.89" height="6" rx="3" fill="#3178c6" class="grow"/>
-        <text x="970" y="221" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">13.5%</text>
+        <circle cx="357" cy="130" r="4.5" fill="#e34c26"/>
+        <text x="370" y="134" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">HTML</text>
+        <rect x="486" y="127" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="127" width="96" height="5" rx="2.5" fill="#e34c26" class="grow"/>
+        <text x="642" y="134" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">36.4%</text>
+      </g><g class="tile" style="animation-delay:0.36s">
+        <circle cx="357" cy="154" r="4.5" fill="#f1e05a"/>
+        <text x="370" y="158" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">JavaScript</text>
+        <rect x="486" y="151" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="151" width="35.92" height="5" rx="2.5" fill="#f1e05a" class="grow"/>
+        <text x="642" y="158" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">13.6%</text>
+      </g><g class="tile" style="animation-delay:0.42s">
+        <circle cx="357" cy="178" r="4.5" fill="#4F5D95"/>
+        <text x="370" y="182" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">PHP</text>
+        <rect x="486" y="175" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="175" width="35.79" height="5" rx="2.5" fill="#4F5D95" class="grow"/>
+        <text x="642" y="182" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">13.6%</text>
+      </g><g class="tile" style="animation-delay:0.48s">
+        <circle cx="357" cy="202" r="4.5" fill="#3178c6"/>
+        <text x="370" y="206" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">TypeScript</text>
+        <rect x="486" y="199" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="199" width="35.51" height="5" rx="2.5" fill="#3178c6" class="grow"/>
+        <text x="642" y="206" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">13.5%</text>
+      </g><g class="tile" style="animation-delay:0.54s">
+        <circle cx="357" cy="226" r="4.5" fill="#f7523f"/>
+        <text x="370" y="230" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">Blade</text>
+        <rect x="486" y="223" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="223" width="26.54" height="5" rx="2.5" fill="#f7523f" class="grow"/>
+        <text x="642" y="230" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">10.1%</text>
+      </g><g class="tile" style="animation-delay:0.6s">
+        <circle cx="357" cy="250" r="4.5" fill="#a385c2"/>
+        <text x="370" y="254" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" fill="#e8eef9">CSS</text>
+        <rect x="486" y="247" width="96" height="5" rx="2.5" fill="#0f1a33"/>
+        <rect x="486" y="247" width="22.31" height="5" rx="2.5" fill="#a385c2" class="grow"/>
+        <text x="642" y="254" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#a3b3cf">8.5%</text>
+      </g>
+<text x="352" y="284" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="9.5" fill="#6b7fa6">by code volume · includes coursework</text>
+<rect x="654" y="76" width="1" height="210" fill="#1c2b4d"/>
+<text x="676" y="84" class="label">LATEST PUSHES</text>
+<g class="tile" style="animation-delay:0.5s">
+        <text x="676" y="110" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#e8eef9">FP.451-Producto1</text>
+        <text x="676" y="127" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#6b7fa6">06 OCT  ·  </text>
+        <circle cx="748" cy="123.5" r="3.5" fill="#3178c6"/><text x="757" y="127" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#a3b3cf">TypeScript</text>
       </g><g class="tile" style="animation-delay:0.58s">
-        <circle cx="625" cy="244" r="4.5" fill="#f7523f"/>
-        <text x="638" y="248" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">Blade</text>
-        <rect x="748" y="240" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="240" width="47.01" height="6" rx="3" fill="#f7523f" class="grow"/>
-        <text x="970" y="248" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">10.1%</text>
-      </g><g class="tile" style="animation-delay:0.65s">
-        <circle cx="625" cy="271" r="4.5" fill="#a385c2"/>
-        <text x="638" y="275" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" fill="#e8eef9">CSS</text>
-        <rect x="748" y="267" width="170" height="6" rx="3" fill="#0f1a33"/>
-        <rect x="748" y="267" width="39.51" height="6" rx="3" fill="#a385c2" class="grow"/>
-        <text x="970" y="275" text-anchor="end" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="12" font-weight="700" fill="#a3b3cf">8.5%</text>
+        <text x="676" y="155" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#e8eef9">FP.449-Producto1</text>
+        <text x="676" y="172" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#6b7fa6">01 OCT  ·  </text>
+        <circle cx="748" cy="168.5" r="3.5" fill="#b07219"/><text x="757" y="172" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#a3b3cf">Java</text>
+      </g><g class="tile" style="animation-delay:0.66s">
+        <text x="676" y="200" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#e8eef9">LeriFitness</text>
+        <text x="676" y="217" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#6b7fa6">28 SEP  ·  </text>
+        <circle cx="748" cy="213.5" r="3.5" fill="#3178c6"/><text x="757" y="217" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#a3b3cf">TypeScript</text>
+      </g><g class="tile" style="animation-delay:0.74s">
+        <text x="676" y="245" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="700" fill="#e8eef9">Portfolio-V2</text>
+        <text x="676" y="262" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#6b7fa6">26 SEP  ·  </text>
+        <circle cx="748" cy="258.5" r="3.5" fill="#e34c26"/><text x="757" y="262" font-family="'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="10" fill="#a3b3cf">HTML</text>
       </g>
 </svg>
