@@ -16,13 +16,13 @@ export const PROFILE = {
   readouts: [
     ["FOCUS", "Full-stack development"],
     ["INTEREST", "Applied AI"],
-    ["LANGUAGES", "Catalan · Spanish · English B1"],
+    ["LANGUAGES", "Catalan · Spanish · English B1.1"],
     ["METHOD", "Build · Test · Evolve"],
   ],
   ticker: [
     ["EDUCATION", "DAW · LAST SEMESTER", "cyan"],
     ["GRADE AVERAGE", "9.29 / 10", "cyan"],
-    ["EXPERIENCE", "7+ YRS · 4 COMPANIES", "violet"],
+    ["PRIOR CAREER", "7+ YRS ADMIN & OPS", "violet"],
     ["PRODUCTS", "2 LIVE PWAs", "green"],
     ["APPLIED AI", "2 YRS EXPLORING", "violet"],
   ],
@@ -67,7 +67,7 @@ export const ICONS = {
   Laravel: { dev: "laravel/laravel-original" },
   "Spring Boot": { dev: "spring/spring-original" },
   WordPress: { si: "wordpress" },
-  MySQL: { si: "mysql" },
+  MySQL: { dev: "mysql/mysql-original", lift: true, bold: 5 },
   MongoDB: { dev: "mongodb/mongodb-original" },
   Mongoose: { si: "mongoose" },
   Supabase: { dev: "supabase/supabase-original" },
@@ -98,18 +98,20 @@ export const ICONS = {
   Codex: { mono: "CX", color: "#E8EEF9" },
   Gemini: { si: "googlegemini" },
   DeepSeek: { si: "deepseek" },
-  Copilot: { si: "githubcopilot" },
+  Copilot: { mono: "CP", color: "#2B88D8" },
   "Suno AI": { mono: "SU", color: "#E8EEF9" },
   "AI agents": { mono: "AG", color: "#22C55E" },
 };
 
-// Stack items: [label, icon key (defaults to the label), tier]. Tier "live" = shipped in a production
-// app (HotelScout / Forja); everything else is in use or being learned.
+// Stack items: [label, icon key (defaults to the label), tier].
+//   "live"  = part of a shipped product's codebase (HotelScout / Forja): runtime, build, tests or CI
+//   "learn" = still being learned, with no project in the linked repositories yet
+//   none    = used in coursework and team projects
 export const STACK = [
   {
     layer: "LANGUAGES",
     caption: "core syntax",
-    items: [["Java"], ["JavaScript"], ["TypeScript", null, "live"], ["PHP"], ["Python"], ["C"], ["C++"], ["SQL"]],
+    items: [["Java"], ["JavaScript"], ["TypeScript", null, "live"], ["PHP"], ["SQL"], ["Python", null, "learn"], ["C", null, "learn"], ["C++", null, "learn"]],
   },
   {
     layer: "INTERFACE LAYER",
@@ -151,7 +153,7 @@ export const STACK = [
     layer: "AI MODULE",
     caption: "applied ai",
     items: [
-      ["Claude · Claude Code", "Claude"], ["ChatGPT"], ["Codex"], ["Gemini"], ["DeepSeek"], ["Copilot"], ["Suno AI"], ["AI agents"],
+      ["Claude · Claude Code", "Claude"], ["ChatGPT"], ["Codex"], ["Gemini"], ["DeepSeek"], ["Microsoft Copilot", "Copilot"], ["Suno AI"], ["AI agents"],
     ],
   },
 ];
@@ -192,7 +194,7 @@ export const FEATURED = [
     kind: "Personal gym training PWA",
     url: "forja-13u.pages.dev",
     summary:
-      "Local-first training app: plans come from a deterministic, fully tested rule engine built on evidence-backed training principles — no AI decides your plan. Works offline and keeps health data on the device.",
+      "Local-first training app: plans come from a deterministic, unit-tested rule engine built on evidence-backed training principles — no AI decides your plan. Works offline and keeps health data on the device.",
     flow: [
       { tag: "INTERFACE", title: "React 19 UI", lines: ["Tailwind · shadcn/ui", "Motion · i18n"] },
       { tag: "ENGINE", title: "Rule engine", lines: ["pure TypeScript", "deterministic · tested"] },
@@ -202,7 +204,7 @@ export const FEATURED = [
     extras: [
       { tag: "OPTIONAL", title: "Supabase sync", line: "EU · RLS · no health data" },
       { tag: "LAZY", title: "3D anatomy", line: "three.js · React Three Fiber" },
-      { tag: "ON-DEVICE", title: "AI glossary", line: "WebLLM · Gemini optional" },
+      { tag: "ASSISTANT", title: "AI Q&A", line: "WebLLM · Gemini · glossary" },
     ],
     systemsTitle: "KEY SYSTEMS",
     systems: [
@@ -236,10 +238,10 @@ export const RACK = [
     index: "04",
     name: "REPARAYA",
     repo: "ReparaYa · Producto 2 → 4",
-    kind: "Repair management, rebuilt three times",
+    kind: "Repair management in three iterations",
     context: "TEAM OF 3 · UOC FP.448",
     icons: ["PHP", "Laravel", "WordPress", "MySQL", "Docker"],
-    chain: ["P2 · PHP MVC", "P3 · Laravel 12", "P4 · WordPress", "MySQL 8"],
+    chain: ["P2 · PHP MVC", "P3 · Laravel 12", "P4 · WordPress site", "MySQL 8"],
     note: "roles · calendar · REST JSON API · deployed to a UOC server",
   },
   {
@@ -248,9 +250,9 @@ export const RACK = [
     repo: "BugBusters · Producto 5",
     kind: "Java desktop store management",
     context: "TEAM OF 4 · UOC FP.447",
-    icons: ["Java", "Hibernate", "MySQL", "Maven", "JUnit"],
+    icons: ["Java", "JavaFX", "Hibernate", "MySQL", "Maven"],
     chain: ["JavaFX · FXML", "controllers", "JPA · Hibernate", "MySQL"],
-    note: "KPI dashboard · Maven · grew from a console app with JUnit tests",
+    note: "KPI dashboard · grew from a console app (P2) with JUnit tests",
   },
 ];
 

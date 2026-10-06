@@ -73,14 +73,18 @@ function onScreen(hex) {
 // so the same logo can appear twice in one document.
 const deviconCache = new Map();
 let markId = 0;
-function devicon(slug, x, y, size) {
-  if (!deviconCache.has(slug)) {
+function devicon(slug, x, y, size, { lift = false, bold = 0 } = {}) {
+  const cacheKey = `${slug}:${lift}:${bold}`;
+  if (!deviconCache.has(cacheKey)) {
     const raw = readFileSync(new URL(`${slug}.svg`, DEVICON_DIR), "utf8");
     const viewBox = raw.match(/viewBox="([^"]+)"/)[1];
     const inner = raw.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
-    deviconCache.set(slug, { viewBox, inner: trim(inner) });
+    let body = lift ? inner.replace(/#([0-9a-fA-F]{6})\b/g, (_, hex) => onScreen(hex)) : inner;
+    // Hairline marks (e.g. the MySQL dolphin) vanish at chip size; a same-colour stroke thickens them.
+    if (bold) body = `<g stroke="${body.match(/fill="(#[0-9a-fA-F]{6})"/)[1]}" stroke-width="${bold}" stroke-linejoin="round">${body}</g>`;
+    deviconCache.set(cacheKey, { viewBox, inner: trim(body) });
   }
-  const { viewBox, inner } = deviconCache.get(slug);
+  const { viewBox, inner } = deviconCache.get(cacheKey);
   const p = `m${++markId}`;
   const scoped = inner
     .replace(/id="([^"]+)"/g, `id="${p}-$1"`)
@@ -99,7 +103,7 @@ function monogram(text, x, y, size, color) {
 function techMark(key, x, y, size) {
   const spec = ICONS[key];
   if (!spec) throw new Error(`No icon defined for "${key}" in scripts/data/profile.mjs`);
-  if (spec.dev) return devicon(spec.dev, x, y, size);
+  if (spec.dev) return devicon(spec.dev, x, y, size, spec);
   if (spec.si) return brandIcon(spec.si, x, y, size, onScreen(SIMPLE_ICONS[spec.si].hex));
   return monogram(spec.mono, x, y, size, spec.color);
 }
@@ -435,13 +439,15 @@ ${block(goal, nodes.goal.x - 40, mid + 36)}`,
 
 function chip(x, y, [label, key, tier], { size = 11.5, h = 30, icon = 16, textColor } = {}) {
   const live = tier === "live";
+  const learn = tier === "learn";
   const w = round(10 + icon + 8 + monoWidth(label, size) + (live ? 22 : 12));
+  const stroke = live ? `stroke="${COLORS.cyan}" stroke-opacity=".6"` : learn ? `stroke="${COLORS.lineHi}" stroke-dasharray="3 3"` : `stroke="${COLORS.line}"`;
   return {
     w,
     svg: `<g>
-      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="7" fill="${live ? COLORS.raised : COLORS.panel}" stroke="${live ? COLORS.cyan : COLORS.line}" stroke-opacity="${live ? 0.6 : 1}"/>
-      ${techMark(key ?? label, x + 10, y + (h - icon) / 2, icon)}
-      <text x="${round(x + 10 + icon + 8)}" y="${round(y + h / 2 + size * 0.36)}" font-family="${FONTS.mono}" font-size="${size}" font-weight="${live ? 600 : 500}" fill="${textColor ?? (live ? COLORS.text : COLORS.muted)}">${esc(label)}</text>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="7" fill="${live ? COLORS.raised : learn ? COLORS.base : COLORS.panel}" ${stroke}/>
+      <g${learn ? ' opacity=".7"' : ""}>${techMark(key ?? label, x + 10, y + (h - icon) / 2, icon)}</g>
+      <text x="${round(x + 10 + icon + 8)}" y="${round(y + h / 2 + size * 0.36)}" font-family="${FONTS.mono}" font-size="${size}" font-weight="${live ? 600 : 500}" fill="${textColor ?? (live ? COLORS.text : learn ? COLORS.dim : COLORS.muted)}">${esc(label)}</text>
       ${live ? `<circle cx="${round(x + w - 11)}" cy="${y + h / 2}" r="3" fill="${COLORS.green}" class="pulse"/>` : ""}
     </g>`,
   };
@@ -487,16 +493,18 @@ function technologyMatrix() {
   const total = STACK.reduce((n, g) => n + g.items.length, 0);
   const live = STACK.reduce((n, g) => n + g.items.filter((it) => it[2] === "live").length, 0);
   const legend = `<g>
-    <circle cx="${W - 356}" cy="23" r="3" fill="${COLORS.green}"/>
-    <text x="${W - 348}" y="27" class="meta">LIVE IN PRODUCTION</text>
-    <rect x="${W - 192}" y="17" width="12" height="12" rx="3" stroke="${COLORS.line}" fill="${COLORS.panel}"/>
-    <text x="${W - 174}" y="27" class="meta">IN USE · LEARNING</text>
+    <circle cx="${W - 452}" cy="23" r="3" fill="${COLORS.green}"/>
+    <text x="${W - 444}" y="27" class="meta">SHIPPED PRODUCT</text>
+    <rect x="${W - 300}" y="17" width="12" height="12" rx="3" stroke="${COLORS.line}" fill="${COLORS.panel}"/>
+    <text x="${W - 282}" y="27" class="meta">IN USE</text>
+    <rect x="${W - 200}" y="17" width="12" height="12" rx="3" stroke="${COLORS.lineHi}" stroke-dasharray="3 3" fill="${COLORS.base}"/>
+    <text x="${W - 182}" y="27" class="meta">LEARNING</text>
   </g>`;
   return svgDocument({
     width: W,
     height: H,
     title: "Technology matrix",
-    desc: `${total} technologies across ${STACK.length} layers, ${live} of them shipped in live products. ${STACK.map((g) => `${g.layer}: ${g.items.map((it) => it[0] + (it[2] === "live" ? " (live)" : "")).join(", ")}`).join(". ")}.`,
+    desc: `${total} technologies across ${STACK.length} layers, ${live} of them part of the shipped HotelScout and Forja codebases. ${STACK.map((g) => `${g.layer}: ${g.items.map((it) => it[0] + (it[2] === "live" ? " (shipped)" : it[2] === "learn" ? " (learning)" : "")).join(", ")}`).join(". ")}.`,
     defs: `${frame.defs}<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${COLORS.cyan}" stop-opacity="0"/><stop offset=".5" stop-color="${COLORS.cyan}" stop-opacity=".1"/><stop offset="1" stop-color="${COLORS.cyan}" stop-opacity="0"/></linearGradient>`,
     style: `.sweep { animation: sweep 11s cubic-bezier(.45,0,.55,1) 1s infinite; }
       @keyframes sweep { from { transform: translateX(${colX}px); } 60%, to { transform: translateX(${W + 160}px); } }`,
