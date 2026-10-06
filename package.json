@@ -1,0 +1,19 @@
+{
+  "name": "erickcoll-profile",
+  "private": true,
+  "description": "Build tooling for the EricKColl GitHub profile README (static SVG assets and daily telemetry cards).",
+  "type": "module",
+  "scripts": {
+    "build:assets": "node scripts/build-assets.mjs",
+    "build:cards": "node scripts/generate-cards.mjs",
+    "preview:cards": "node scripts/generate-cards.mjs --preview"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@fontsource/michroma": "5.3.0",
+    "opentype.js": "2.0.0",
+    "simple-icons": "16.34.0"
+  }
+}
