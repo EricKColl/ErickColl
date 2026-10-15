@@ -181,7 +181,7 @@ export const FEATURED = [
       "Installable, opens offline, favourites stay local",
     ],
     metricsTitle: "QUALITY GATES",
-    metrics: [["85", "unit + integration"], ["21", "end-to-end"], ["0", "axe violations"], ["0", "npm audit"]],
+    metrics: [["95", "unit + integration"], ["23", "end-to-end"], ["0", "axe violations"], ["0", "npm audit"]],
     stack: [
       ["React 19", "React"], ["TypeScript"], ["Vite"], ["Tailwind CSS 4", "Tailwind CSS"], ["Leaflet"],
       ["TanStack Query"], ["Zod"], ["Vitest"], ["Playwright"], ["Cloudflare Pages"],

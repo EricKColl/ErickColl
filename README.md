@@ -35,10 +35,10 @@ I build software the way I learned to run operations: with structure, ownership 
 
 Progressive Web App that finds real accommodation near a station, an airport or an address using OpenStreetMap data, with an interactive map, filters, favourites and a Booking.com search link — no accounts, no trackers, €0 running cost.
 
-<a href="https://github.com/EricKColl/hotelscout"><img src="assets/modules/hotelscout.svg" width="100%" alt="HotelScout architecture: React PWA → Cloudflare Pages Functions proxy → Nominatim and Overpass. Quality gates: 85 unit and integration tests, 21 end-to-end tests, 0 axe violations, 0 npm audit vulnerabilities."></a>
+<a href="https://github.com/EricKColl/hotelscout"><img src="assets/modules/hotelscout.svg" width="100%" alt="HotelScout architecture: React PWA → Cloudflare Pages Functions proxy → Nominatim and Overpass. Quality gates: 95 unit and integration tests, 23 end-to-end tests, 0 axe violations, 0 npm audit vulnerabilities."></a>
 
 <img src="assets/ui/badge-live.svg" height="20" alt="Live"> **[hotelscout.pages.dev →](https://hotelscout.pages.dev)** · [Source](https://github.com/EricKColl/hotelscout) · [CI](https://github.com/EricKColl/hotelscout/actions/workflows/ci.yml)<br>
-<sub>85 unit/integration + 21 end-to-end tests (Vitest · Playwright) · 0 axe violations · 0 npm audit vulnerabilities · React · TypeScript · Vite · Tailwind CSS · Leaflet · Cloudflare Pages · PWA</sub>
+<sub>95 unit/integration + 23 end-to-end tests (Vitest · Playwright) · 0 axe violations · 0 npm audit vulnerabilities · React · TypeScript · Vite · Tailwind CSS · Leaflet · Cloudflare Pages · PWA</sub>
 
 ### [Forja](https://github.com/EricKColl/LeriFitness) · personal gym training PWA
 
